@@ -18,6 +18,7 @@ from tqdm import trange
 import argparse
 # from lang_sam import LangSAM
 from LLM4PicknPlace import PickAndPlaceAgent
+from Image_tagging import TaggingModule
 
 
 import math
@@ -27,53 +28,6 @@ import json
 import torch
 import torchvision
 
-# from conceptgraph.utils.vis import vis_result_fast, vis_result_slow_caption
-
-# try: 
-#     from groundingdino.util.inference import Model
-#     from segment_anything import sam_model_registry, SamPredictor, SamAutomaticMaskGenerator
-# except ImportError as e:
-#     print("Import Error: Please install Grounded Segment Anything following the instructions in README.")
-#     raise e
-
-# Set up some path used in this script
-# Assuming all checkpoint files are downloaded as instructed by the original GSA repo
-if "GSA_PATH" in os.environ:
-    GSA_PATH = os.environ["GSA_PATH"]
-else:
-    raise ValueError("Please set the GSA_PATH environment variable to the path of the GSA repo. ")
-    
-import sys
-TAG2TEXT_PATH = os.path.join(GSA_PATH, "Tag2Text")
-# EFFICIENTSAM_PATH = os.path.join(GSA_PATH, "EfficientSAM")
-RAM_PATH = os.path.join(GSA_PATH, "recognize-anything")
-sys.path.append(GSA_PATH) # This is needed for the following imports in this file
-sys.path.append(TAG2TEXT_PATH) # This is needed for some imports in the Tag2Text files
-# sys.path.append(EFFICIENTSAM_PATH)
-sys.path.append(RAM_PATH)
-try:
-    from ram.models.tag2text import tag2text
-    from ram.models.ram import ram as rm
-    from ram import inference
-    import torchvision.transforms as TS
-except ImportError as e:
-    print("Tag2text sub-package not found. Please check your GSA_PATH. ")
-    raise e
-
-# Disable torch gradient computation
-torch.set_grad_enabled(False)
-    
-# # GroundingDINO config and checkpoint
-# GROUNDING_DINO_CONFIG_PATH = os.path.join(GSA_PATH, "GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py")
-# GROUNDING_DINO_CHECKPOINT_PATH = os.path.join(GSA_PATH, "./groundingdino_swint_ogc.pth")
-
-# # Segment-Anything checkpoint
-# SAM_ENCODER_VERSION = "vit_h"
-# SAM_CHECKPOINT_PATH = os.path.join(GSA_PATH, "./sam_vit_h_4b8939.pth")
-
-# Tag2Text checkpoint
-TAG2TEXT_CHECKPOINT_PATH = os.path.join(GSA_PATH, "./tag2text_swin_14m.pth")
-RAM_CHECKPOINT_PATH = os.path.join(GSA_PATH, "./ram_swin_large_14m.pth")
 
 
 
@@ -201,7 +155,103 @@ def update_scene_graph(scene_graph,action,obj_id,recept_id):
 
     return scene_graph
 
+def open_receptacle(scene_graph,controller,obj_id,action_no):
 
+    controller.step(
+        action="OpenObject",
+        objectId=obj_id,
+        openness=1,
+        forceAction=False
+    )
+
+    save_frame(controller,str(action_no))
+
+    #Verify Action 
+
+    # #Update SG
+    action = "Open"
+    scene_graph = update_scene_graph(scene_graph,action,obj_id,None)
+
+    return scene_graph
+
+def pick_object(scene_graph,controller,obj_id,action_no):
+
+    event = controller.step(
+    action="PickupObject",
+    objectId=obj_id,
+    forceAction=False,
+    manualInteract=False
+    )
+
+    bgr_frame = save_frame(controller,str(action_no))
+
+    #Verify Action
+
+
+    #Update SG
+    action = "Pickup"
+    scene_graph = update_scene_graph(scene_graph,action,obj_id,None)
+
+    return scene_graph
+
+def put_object(scene_graph,controller,obj_id,action_no):
+
+    controller.step(
+    action="PutObject",
+    objectId=obj_id,
+    forceAction=False,
+    placeStationary=True
+    )
+
+    save_frame(controller,str(action_no))
+
+
+    #Verify
+    action = "Putdown"
+    scene_graph = update_scene_graph(scene_graph,action,obj_id,obj_id)    
+
+    return scene_graph
+
+def close_receptacle(scene_graph,controller,obj_id,action_no):
+
+    controller.step(
+    action="CloseObject",
+    objectId=obj_id,
+    forceAction=False
+    )
+    
+    save_frame(controller,str(action_no))
+    
+    # #Verify
+
+    # #Update SG
+    action = "Close"
+    scene_graph = update_scene_graph(scene_graph,action,obj_id,None)
+
+    return scene_graph
+
+def navigate(controller,object,scene_graph,action_no,tagging_module):
+
+    angle_deg, closest, obj_id = get_angle_and_closest_position(controller,object,scene_graph)
+    controller.step(action="Teleport", **closest)
+    angle = rotate_angle(controller, object)
+    controller.step(
+        action="RotateRight",
+        degrees=angle
+    )
+
+
+    bgr_frame = save_frame(controller,str(action_no))
+
+
+    closest_items = find_closest_items(controller.last_event.metadata["agent"]["position"], scene_graph, num_items=10)
+    caption, text_prompt = tagging_module.predict(bgr_frame)
+    print(text_prompt)
+    print(closest_items)
+
+    return obj_id, scene_graph
+
+    
 def closest_position(
     object_position: Dict[str, float],
     reachable_positions: List[Dict[str, float]]
@@ -298,241 +348,11 @@ def find_closest_items(agent_position, scene_graph, num_items=5):
     return closest_items
 
 
-# def compute_clip_features(image, detections, clip_model, clip_preprocess, clip_tokenizer, classes, device):
-#     backup_image = image.copy()
-    
-#     image = Image.fromarray(image)
-    
-#     # padding = args.clip_padding  # Adjust the padding amount as needed
-#     padding = 20  # Adjust the padding amount as needed
-    
-#     image_crops = []
-#     image_feats = []
-#     text_feats = []
-
-    
-#     for idx in range(len(detections.xyxy)):
-#         # Get the crop of the mask with padding
-#         x_min, y_min, x_max, y_max = detections.xyxy[idx]
-
-#         # Check and adjust padding to avoid going beyond the image borders
-#         image_width, image_height = image.size
-#         left_padding = min(padding, x_min)
-#         top_padding = min(padding, y_min)
-#         right_padding = min(padding, image_width - x_max)
-#         bottom_padding = min(padding, image_height - y_max)
-
-#         # Apply the adjusted padding
-#         x_min -= left_padding
-#         y_min -= top_padding
-#         x_max += right_padding
-#         y_max += bottom_padding
-
-#         cropped_image = image.crop((x_min, y_min, x_max, y_max))
-        
-#         # Get the preprocessed image for clip from the crop 
-#         preprocessed_image = clip_preprocess(cropped_image).unsqueeze(0).to("cuda")
-
-#         crop_feat = clip_model.encode_image(preprocessed_image)
-#         crop_feat /= crop_feat.norm(dim=-1, keepdim=True)
-        
-#         class_id = detections.class_id[idx]
-#         tokenized_text = clip_tokenizer([classes[class_id]]).to("cuda")
-#         text_feat = clip_model.encode_text(tokenized_text)
-#         text_feat /= text_feat.norm(dim=-1, keepdim=True)
-        
-#         crop_feat = crop_feat.cpu().numpy()
-#         text_feat = text_feat.cpu().numpy()
-
-#         image_crops.append(cropped_image)
-#         image_feats.append(crop_feat)
-#         text_feats.append(text_feat)
-        
-#     # turn the list of feats into np matrices
-#     image_feats = np.concatenate(image_feats, axis=0)
-#     text_feats = np.concatenate(text_feats, axis=0)
-
-#     return image_crops, image_feats, text_feats
-
-# def get_sam_segmentation_from_xyxy(sam_predictor: SamPredictor, image: np.ndarray, xyxy: np.ndarray) -> np.ndarray:
-#     sam_predictor.set_image(image)
-#     result_masks = []
-#     for box in xyxy:
-#         masks, scores, logits = sam_predictor.predict(
-#             box=box,
-#             multimask_output=True
-#         )
-#         index = np.argmax(scores)
-#         result_masks.append(masks[index])
-#     return np.array(result_masks)
-
-# def get_sam_segmentation_from_point_and_box(sam_predictor: SamPredictor, image: np.ndarray, xyxy: np.ndarray,input_point: np.ndarray,input_label: np.ndarray) -> np.ndarray:
-#     sam_predictor.set_image(image)
-#     result_masks = []
-#     for box in xyxy:
-#         masks, scores, _ = sam_predictor.predict(
-#                 point_coords=input_point,
-#                 point_labels=input_label,
-#                 box=box,
-#                 multimask_output=True,
-#             )
-#         index = np.argmax(scores)
-#         result_masks.append(masks[index])
-#     return np.array(result_masks)
-
-
-# def get_sam_predictor(variant: str, device: str | int) -> SamPredictor:
-#     if variant == "sam":
-#         sam = sam_model_registry[SAM_ENCODER_VERSION](checkpoint=SAM_CHECKPOINT_PATH)
-#         sam.to(device)
-#         sam_predictor = SamPredictor(sam)
-#         return sam_predictor
-    
-#     if variant == "mobilesam":
-#         from MobileSAM.setup_mobile_sam import setup_model
-#         MOBILE_SAM_CHECKPOINT_PATH = os.path.join(GSA_PATH, "./EfficientSAM/mobile_sam.pt")
-#         checkpoint = torch.load(MOBILE_SAM_CHECKPOINT_PATH)
-#         mobile_sam = setup_model()
-#         mobile_sam.load_state_dict(checkpoint, strict=True)
-#         mobile_sam.to(device=device)
-        
-#         sam_predictor = SamPredictor(mobile_sam)
-#         return sam_predictor
-
-#     elif variant == "lighthqsam":
-#         from LightHQSAM.setup_light_hqsam import setup_model
-#         HQSAM_CHECKPOINT_PATH = os.path.join(GSA_PATH, "./EfficientSAM/sam_hq_vit_tiny.pth")
-#         checkpoint = torch.load(HQSAM_CHECKPOINT_PATH)
-#         light_hqsam = setup_model()
-#         light_hqsam.load_state_dict(checkpoint, strict=True)
-#         light_hqsam.to(device=device)
-        
-#         sam_predictor = SamPredictor(light_hqsam)
-#         return sam_predictor
-        
-#     elif variant == "fastsam":
-#         raise NotImplementedError
-#     else:
-#         raise NotImplementedError
-    
-
-# def get_mask(bgr_frame):
-
-#     image_rgb = cv2.cvtColor(bgr_frame, cv2.COLOR_BGR2RGB)
-#     sam_variant = "sam"
-#     sam_predictor = get_sam_predictor(sam_variant, args.device)
-#     mask = get_sam_segmentation_from_xyxy(
-#                 sam_predictor=sam_predictor,
-#                 image=image_rgb,
-#                 xyxy=np.array([[260,280,380,400]])
-#         )
-    
-#     # contours, _ = cv2.findContours(mask.astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    
-#     # # Create a white background
-#     # white_bg = np.ones_like(bgr_frame) * 255
-
-#     # # Draw contours on the white background
-#     # cv2.drawContours(white_bg, contours, -1, (0, 0, 0), thickness=1)
-
-#     # # Save the image
-#     # cv2.imwrite("masked.jpg", white_bg)
-
-#     image_np = np.array(image_rgb)
-#     print(mask.shape)
-#     print(np.shape(image_np))
-#     mask = mask[0]
-#     print(mask.shape)
-#     # Create an all-black image of the same shape as the input image
-#     black_image = np.zeros_like(image_np)
-#     # Wherever the mask is True, replace the black image pixel with the original image pixel
-#     black_image[mask] = image_np[mask]
-#     # convert back to pil image
-#     black_image = Image.fromarray(black_image)
-
-#     black_image.save("saved_image.png")
-
-#     return None    
-
-# def get_mask_with_pointprompt(bgr_frame):
-
-#     image_rgb = cv2.cvtColor(bgr_frame, cv2.COLOR_BGR2RGB)
-#     sam_variant = "sam"
-#     sam_predictor = get_sam_predictor(sam_variant, args.device)
-#     mask = get_sam_segmentation_from_point_and_box(
-#                 sam_predictor=sam_predictor,
-#                 image=image_rgb,
-#                 xyxy=np.array([[230,240,410,480]]),
-#                 input_point = np.array([[320, 340]]),
-#                 input_label = np.array([1])
-#         )
-    
-#     # contours, _ = cv2.findContours(mask.astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    
-#     # # Create a white background
-#     # white_bg = np.ones_like(bgr_frame) * 255
-
-#     # # Draw contours on the white background
-#     # cv2.drawContours(white_bg, contours, -1, (0, 0, 0), thickness=1)
-
-#     # # Save the image
-#     # cv2.imwrite("masked.jpg", white_bg)
-
-#     image_np = np.array(image_rgb)
-#     print(mask.shape)
-#     print(np.shape(image_np))
-#     mask = mask[0]
-#     print(mask.shape)
-#     # Create an all-black image of the same shape as the input image
-#     black_image = np.zeros_like(image_np)
-#     # Wherever the mask is True, replace the black image pixel with the original image pixel
-#     black_image[mask] = image_np[mask]
-#     # convert back to pil image
-#     # black_image = Image.fromarray(black_image)
-
-#     # black_image.save("pepper_shaker_masked.png")
-#     cv2.imwrite("pepper_shaker_masked.png",black_image)
-#     return black_image  
-
-def tagging_module(bgr_frame):
-
-    delete_tag_index = []
-    for i in range(3012, 3429):
-        delete_tag_index.append(i)
-
-    specified_tags='None'
-    # load model
-    tagging_model = tag2text(pretrained=TAG2TEXT_CHECKPOINT_PATH,
-                                            image_size=384,
-                                            vit='swin_b',
-                                            delete_tag_index=delete_tag_index)
-    # threshold for tagging
-    # we reduce the threshold to obtain more tags
-    tagging_model.threshold = 0.64 
-    tagging_model = tagging_model.eval().to(args.device)
-    tagging_transform = TS.Compose([
-                            TS.Resize((384, 384)),
-                            TS.ToTensor(), 
-                            TS.Normalize(mean=[0.485, 0.456, 0.406],
-                            std=[0.229, 0.224, 0.225]),
-                                     ])
-    
-    image_rgb = cv2.cvtColor(bgr_frame, cv2.COLOR_BGR2RGB) # Convert to RGB color space
-    image_pil = Image.fromarray(image_rgb)
-    raw_image = image_pil.resize((384, 384))
-    raw_image = tagging_transform(raw_image).unsqueeze(0).to(args.device)
-
-    res = inference.inference_tag2text(raw_image , tagging_model, specified_tags)
-    caption=res[2]
-    
-    text_prompt=res[0].replace(' |', ',')
-
-    return caption, text_prompt
 
 def save_frame(controller,state):
 
     bgr_frame = cv2.cvtColor(controller.last_event.frame, cv2.COLOR_RGB2BGR)
-    cv2.imwrite(state+'.jpg', bgr_frame)
+    cv2.imwrite("action_images/"+state+'.jpg', bgr_frame)
 
     return bgr_frame
 
@@ -657,6 +477,7 @@ def main(args: argparse.Namespace):
 
     # Initialize the controller
     controller = Controller(
+        	# agentMode = "arm",
         agentMode="default",
         visibilityDistance=1.5,
         # scene=get_scene(args.scene_name),
@@ -701,7 +522,7 @@ def main(args: argparse.Namespace):
     agent = PickAndPlaceAgent()
     planner = agent.pick_and_place(object_list,prompt)
 
-
+    tagging_module = TaggingModule()
 
 
     print(planner)
@@ -720,42 +541,46 @@ def main(args: argparse.Namespace):
 
 ###############################################################################################
     #Navigate + Tune Location (To View Object + Effective Manip)
-    angle_deg, closest, target_recept_id = get_angle_and_closest_position(controller,target_receptacle,scene_graph)
-    event = controller.step(action="Teleport", **closest) 
-    angle = rotate_angle(controller, target_receptacle)
-    # # Rewind the rotation
-    controller.step(
-        action="RotateRight",  # Rewind the rotation by rotating right
-        degrees=angle
-    )
+    # angle_deg, closest, target_recept_id = get_angle_and_closest_position(controller,target_receptacle,scene_graph)
+    # event = controller.step(action="Teleport", **closest) 
+    # angle = rotate_angle(controller, target_receptacle)
+    # # # Rewind the rotation
+    # controller.step(
+    #     action="RotateRight",  # Rewind the rotation by rotating right
+    #     degrees=angle
+    # )
 
-    event = controller.step("MoveBack")
-    bgr_frame=save_frame(controller,"1")
+    # event = controller.step("MoveBack")
+    # bgr_frame=save_frame(controller,"1")
 
 
-    #Verify
-    closest_items = find_closest_items(event.metadata["agent"]["position"], scene_graph, num_items=5)
-    caption, text_prompt = tagging_module(bgr_frame)
-    print(text_prompt)
-    print(closest_items)   
+    # #Verify
+    # closest_items = find_closest_items(event.metadata["agent"]["position"], scene_graph, num_items=5)
+    # caption, text_prompt = tagging_module.predict(bgr_frame)
+    # print(text_prompt)
+    # print(closest_items)   
+
+    target_recept_id, scene_graph = navigate(controller,target_receptacle,scene_graph,1,tagging_module)
+    #TODO: Find a score
 
 
 
     # #TargetReceptacle Manipulation (Open)
-    controller.step(
-        action="OpenObject",
-        objectId=target_recept_id,
-        openness=1,
-        forceAction=False
-    )
+    # controller.step(
+    #     action="OpenObject",
+    #     objectId=target_recept_id,
+    #     openness=1,
+    #     forceAction=False
+    # )
 
-    save_frame(controller,"2")
+    # save_frame(controller,"2")
 
-    #Verify Action + Update SG
+    # #Verify Action + Update SG
 
-    # #Update SG
-    action = "Open"
-    scene_graph = update_scene_graph(scene_graph,action,target_recept_id,None)
+    # # #Update SG
+    # action = "Open"
+    # scene_graph = update_scene_graph(scene_graph,action,target_recept_id,None)
+    scene_graph = open_receptacle(scene_graph,controller,target_recept_id,2)
 
 
 ##########################################################################################
@@ -765,103 +590,108 @@ def main(args: argparse.Namespace):
 ########################################################################################3
 
     #Navigate to Object
-    angle_deg, closest, obj_id = get_angle_and_closest_position(controller,object,scene_graph)
-    controller.step(action="Teleport", **closest)
-    angle = rotate_angle(controller, object)
-    controller.step(
-        action="RotateRight",
-        degrees=angle
-    )
+    # angle_deg, closest, obj_id = get_angle_and_closest_position(controller,object,scene_graph)
+    # controller.step(action="Teleport", **closest)
+    # angle = rotate_angle(controller, object)
+    # controller.step(
+    #     action="RotateRight",
+    #     degrees=angle
+    # )
 
 
-    bgr_frame = save_frame(controller,"3")
+    # bgr_frame = save_frame(controller,"3")
 
 
-    closest_items = find_closest_items(event.metadata["agent"]["position"], scene_graph, num_items=5)
-    caption, text_prompt = tagging_module(bgr_frame)
-    print(text_prompt)
-    print(closest_items)
+    # closest_items = find_closest_items(event.metadata["agent"]["position"], scene_graph, num_items=10)
+    # caption, text_prompt = tagging_module.predict(bgr_frame)
+    # print(text_prompt)
+    # print(closest_items)
 
-
-
-
-    #Object Pickup
-    event = controller.step(
-    action="PickupObject",
-    objectId=obj_id,
-    forceAction=False,
-    manualInteract=False
-    )
-
-    bgr_frame = save_frame(controller,"4")
+    obj_id, scene_graph = navigate(controller,object,scene_graph,3,tagging_module)
 
 
 
-    #Verify 
-    # black_image = get_mask_with_pointprompt(bgr_frame)
-    # frame = cv2.cvtColor(black_image,cv2.COLOR_RGB2BGR)
+    # #Object Pickup
+    # event = controller.step(
+    # action="PickupObject",
+    # objectId=obj_id,
+    # forceAction=False,
+    # manualInteract=False
+    # )
 
-    #Update SG
-    action = "Pickup"
-    scene_graph = update_scene_graph(scene_graph,action,obj_id,None)
-    print(scene_graph[obj_id])
+    # bgr_frame = save_frame(controller,"4")
 
-    print(event.metadata["agent"]["position"])
+
+
+    # #Verify 
+    # # black_image = get_mask_with_pointprompt(bgr_frame)
+    # # frame = cv2.cvtColor(black_image,cv2.COLOR_RGB2BGR)
+
+    # #Update SG
+    # action = "Pickup"
+    # scene_graph = update_scene_graph(scene_graph,action,obj_id,None)
+    # print(scene_graph[obj_id])
+
+    # print(event.metadata["agent"]["position"])
+    scene_graph = pick_object(scene_graph,controller,obj_id,4)
 
 
 
 ############################################################################
     #Receptacle Navigation
 
-    angle_deg, closest, recept_id = get_angle_and_closest_position(controller,target_receptacle,scene_graph)
-    event = controller.step(action="Teleport", **closest)  
-    angle = rotate_angle(controller, target_receptacle)
-    controller.step(
-        action="RotateRight",  # Rewind the rotation by rotating right
-        degrees=angle
-    )
+    # angle_deg, closest, recept_id = get_angle_and_closest_position(controller,target_receptacle,scene_graph)
+    # event = controller.step(action="Teleport", **closest)  
+    # angle = rotate_angle(controller, target_receptacle)
+    # controller.step(
+    #     action="RotateRight",  # Rewind the rotation by rotating right
+    #     degrees=angle
+    # )
 
 
-    bgr_frame = save_frame(controller,"5")
-    closest_items = find_closest_items(event.metadata["agent"]["position"], scene_graph, num_items=5)
-    caption, text_prompt = tagging_module(bgr_frame)
-    print(text_prompt)
-    print(closest_items)
+    # bgr_frame = save_frame(controller,"5")
+    # closest_items = find_closest_items(event.metadata["agent"]["position"], scene_graph, num_items=5)
+    # caption, text_prompt = tagging_module.predict(bgr_frame)
+    # print(text_prompt)
+    # print(closest_items)
+    recept_id, scene_graph = navigate(controller,target_receptacle,scene_graph,5,tagging_module)
 
 
 
-    #Object Putdown
-    controller.step(
-    action="PutObject",
-    objectId=recept_id,
-    forceAction=False,
-    placeStationary=True
-)
+#     #Object Putdown
+#     controller.step(
+#     action="PutObject",
+#     objectId=recept_id,
+#     forceAction=False,
+#     placeStationary=True
+# )
 
-    save_frame(controller,"6")
+#     save_frame(controller,"6")
 
 
-    #Verify
-    action = "Putdown"
-    scene_graph = update_scene_graph(scene_graph,action,obj_id,recept_id)    
-    print(scene_graph[obj_id])
+#     #Verify
+#     action = "Putdown"
+#     scene_graph = update_scene_graph(scene_graph,action,obj_id,recept_id)    
+#     print(scene_graph[obj_id])
+    scene_graph = put_object(scene_graph,controller,recept_id,6)
 ###########################################################################3
     #
     #TargetReceptacle Manipulation (Close)
 
-    controller.step(
-    action="CloseObject",
-    objectId=recept_id,
-    forceAction=False
-    )
+    # controller.step(
+    # action="CloseObject",
+    # objectId=recept_id,
+    # forceAction=False
+    # )
     
-    save_frame(controller,"7")
+    # save_frame(controller,"7")
     
-    # #Verify
+    # # #Verify
 
-    # #Update SG
-    action = "Close"
-    scene_graph = update_scene_graph(scene_graph,action,recept_id,None)
+    # # #Update SG
+    # action = "Close"
+    # scene_graph = update_scene_graph(scene_graph,action,recept_id,None)
+    scene_graph = close_receptacle(scene_graph,controller,recept_id,7)
 ############################################################################3
 
     #

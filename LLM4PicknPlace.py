@@ -5,6 +5,11 @@ from llama import Llama
 
 class PickAndPlaceAgent:
     def __init__(self):
+        # LLAMA_PATH = os.environ["LLAMA3_PATH"]
+        # sys.path.append(LLAMA_PATH)
+
+        # ckpt_dir = "/home/hydra/Sachin_Workspace/llama3/Meta-Llama-3-8B-Instruct"
+        # tokenizer_path = "/home/hydra/Sachin_Workspace/llama3/Meta-Llama-3-8B-Instruct/tokenizer.model"
         LLAMA_PATH = os.environ["LLAMA_PATH"]
         sys.path.append(LLAMA_PATH)
 
