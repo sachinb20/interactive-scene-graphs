@@ -541,45 +541,12 @@ def main(args: argparse.Namespace):
 
 ###############################################################################################
     #Navigate + Tune Location (To View Object + Effective Manip)
-    # angle_deg, closest, target_recept_id = get_angle_and_closest_position(controller,target_receptacle,scene_graph)
-    # event = controller.step(action="Teleport", **closest) 
-    # angle = rotate_angle(controller, target_receptacle)
-    # # # Rewind the rotation
-    # controller.step(
-    #     action="RotateRight",  # Rewind the rotation by rotating right
-    #     degrees=angle
-    # )
 
-    # event = controller.step("MoveBack")
-    # bgr_frame=save_frame(controller,"1")
-
-
-    # #Verify
-    # closest_items = find_closest_items(event.metadata["agent"]["position"], scene_graph, num_items=5)
-    # caption, text_prompt = tagging_module.predict(bgr_frame)
-    # print(text_prompt)
-    # print(closest_items)   
 
     target_recept_id, scene_graph = navigate(controller,target_receptacle,scene_graph,1,tagging_module)
     #TODO: Find a score
 
 
-
-    # #TargetReceptacle Manipulation (Open)
-    # controller.step(
-    #     action="OpenObject",
-    #     objectId=target_recept_id,
-    #     openness=1,
-    #     forceAction=False
-    # )
-
-    # save_frame(controller,"2")
-
-    # #Verify Action + Update SG
-
-    # # #Update SG
-    # action = "Open"
-    # scene_graph = update_scene_graph(scene_graph,action,target_recept_id,None)
     scene_graph = open_receptacle(scene_graph,controller,target_recept_id,2)
 
 
@@ -590,49 +557,10 @@ def main(args: argparse.Namespace):
 ########################################################################################3
 
     #Navigate to Object
-    # angle_deg, closest, obj_id = get_angle_and_closest_position(controller,object,scene_graph)
-    # controller.step(action="Teleport", **closest)
-    # angle = rotate_angle(controller, object)
-    # controller.step(
-    #     action="RotateRight",
-    #     degrees=angle
-    # )
 
-
-    # bgr_frame = save_frame(controller,"3")
-
-
-    # closest_items = find_closest_items(event.metadata["agent"]["position"], scene_graph, num_items=10)
-    # caption, text_prompt = tagging_module.predict(bgr_frame)
-    # print(text_prompt)
-    # print(closest_items)
 
     obj_id, scene_graph = navigate(controller,object,scene_graph,3,tagging_module)
 
-
-
-    # #Object Pickup
-    # event = controller.step(
-    # action="PickupObject",
-    # objectId=obj_id,
-    # forceAction=False,
-    # manualInteract=False
-    # )
-
-    # bgr_frame = save_frame(controller,"4")
-
-
-
-    # #Verify 
-    # # black_image = get_mask_with_pointprompt(bgr_frame)
-    # # frame = cv2.cvtColor(black_image,cv2.COLOR_RGB2BGR)
-
-    # #Update SG
-    # action = "Pickup"
-    # scene_graph = update_scene_graph(scene_graph,action,obj_id,None)
-    # print(scene_graph[obj_id])
-
-    # print(event.metadata["agent"]["position"])
     scene_graph = pick_object(scene_graph,controller,obj_id,4)
 
 
@@ -640,57 +568,17 @@ def main(args: argparse.Namespace):
 ############################################################################
     #Receptacle Navigation
 
-    # angle_deg, closest, recept_id = get_angle_and_closest_position(controller,target_receptacle,scene_graph)
-    # event = controller.step(action="Teleport", **closest)  
-    # angle = rotate_angle(controller, target_receptacle)
-    # controller.step(
-    #     action="RotateRight",  # Rewind the rotation by rotating right
-    #     degrees=angle
-    # )
-
-
-    # bgr_frame = save_frame(controller,"5")
-    # closest_items = find_closest_items(event.metadata["agent"]["position"], scene_graph, num_items=5)
-    # caption, text_prompt = tagging_module.predict(bgr_frame)
-    # print(text_prompt)
-    # print(closest_items)
     recept_id, scene_graph = navigate(controller,target_receptacle,scene_graph,5,tagging_module)
 
 
 
 #     #Object Putdown
-#     controller.step(
-#     action="PutObject",
-#     objectId=recept_id,
-#     forceAction=False,
-#     placeStationary=True
-# )
 
-#     save_frame(controller,"6")
-
-
-#     #Verify
-#     action = "Putdown"
-#     scene_graph = update_scene_graph(scene_graph,action,obj_id,recept_id)    
-#     print(scene_graph[obj_id])
     scene_graph = put_object(scene_graph,controller,recept_id,6)
 ###########################################################################3
     #
     #TargetReceptacle Manipulation (Close)
 
-    # controller.step(
-    # action="CloseObject",
-    # objectId=recept_id,
-    # forceAction=False
-    # )
-    
-    # save_frame(controller,"7")
-    
-    # # #Verify
-
-    # # #Update SG
-    # action = "Close"
-    # scene_graph = update_scene_graph(scene_graph,action,recept_id,None)
     scene_graph = close_receptacle(scene_graph,controller,recept_id,7)
 ############################################################################3
 
