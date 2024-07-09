@@ -1,1 +1,0 @@
-# interactive-scene-graphs

@@ -43,7 +43,15 @@ RAM_CHECKPOINT_PATH = os.path.join(GSA_PATH, "./ram_swin_large_14m.pth")
 
 
 
-class TaggingModule:
+LLAVA_PYTHON_PATH = os.environ["LLAVA_PYTHON_PATH"]
+sys.path.append(LLAVA_PYTHON_PATH)
+
+from llava.model.builder import load_pretrained_model
+from llava.mm_utils import get_model_name_from_path
+from llava.eval.run_llava import eval_model
+
+
+class RAM:
     def __init__(self, checkpoint_path=TAG2TEXT_CHECKPOINT_PATH):
         """
         Initializes the tagging module by loading the pre-trained model.
@@ -100,5 +108,33 @@ class TaggingModule:
         text_prompt = res[0].replace(' |', ',')
 
         return caption, text_prompt
+    
+
+class LLAVA:
+    def __init__(self):
+        self.model_path = os.getenv("LLAVA_CKPT_PATH")
+        self.conv_mode = "v0_mmtag" # "multimodal"
+        self.num_gpus = 1
+
+
+
+    def tag(self,query,image_file):
+
+        args = type('Args', (), {
+            "model_path": self.model_path,
+            "model_base": None,
+            "model_name": get_model_name_from_path(self.model_path),
+            "query": query,
+            "conv_mode":  self.conv_mode,
+            "image_file": image_file,
+            "sep": ",",
+            "temperature": 0,
+            "top_p": None,
+            "num_beams": 1,
+            "max_new_tokens": 512
+        })()
+
+        output = eval_model(args)
+        return output
 
 

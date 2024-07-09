@@ -1,0 +1,10 @@
+conda activate llmsg
+cd Sachin_Workspace/interactive-scene-graphs
+
+export LLAVA_PYTHON_PATH=/home/hypatia/Sachin_Workspace/LLaVA
+
+export LLAVA_CKPT_PATH=liuhaotian/llava-v1.5-7b
+export GSA_PATH=/home/hypatia/Sachin_Workspace/Grounded-Segment-Anything
+export CUDA_HOME=/home/hypatia/miniconda3/envs/conceptgraph
+export LLAMA_PATH=/home/hypatia/Sachin_Workspace/llama       #change for llama3
+export LLAMA3_PATH=/home/hypatia/Sachin_Workspace/llama3
