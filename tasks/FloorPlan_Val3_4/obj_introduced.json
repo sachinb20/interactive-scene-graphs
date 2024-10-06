@@ -1,0 +1,69 @@
+{
+  "task1": {
+    "prompts": ["Place all items from the CounterTop|+01.59|+00.95|+00.41 into the Drawer"],
+    "action_seq": {
+      "llm_plan": [
+        ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"]
+      ],
+      "object": [
+        ["CounterTop|+01.59|+00.95|+00.41", ["SaltShaker|+01.67|+00.90|+00.45", "ButterKnife|+01.44|+00.90|+00.43"]], 
+        "Cabinet|+00.15|+02.01|-01.60"
+      ]
+    },
+    "removed_object": [["CounterTop|+01.59|+00.95|+00.41","Fork|+01.44|+00.90|+00.34"]]
+  },
+    "task2": {
+      "prompts": ["Move all items from the CounterTop|-00.36|+00.95|+01.09 to the Cabinet"],
+      "action_seq": {
+        "llm_plan": [
+          ["navigate", "pick_object", "navigate", "put_object", "standby"]
+        ],
+        "object": [
+          ["CounterTop|-00.36|+00.95|+01.09", ["Apple|-00.48|+00.97|+00.41","Bowl|-00.65|+00.90|+01.26", "Cup|-00.65|+00.90|+00.74"]], 
+          "Sink|+01.38|+00.81|-01.27"
+        ]
+      },
+      "removed_object": [["CounterTop|-00.36|+00.95|+01.09","Apple|-00.48|+00.97|+00.41"]]
+    },
+
+    "task3": {
+      "prompts": "Transfer all items from the Sink to the Microwave",
+      "action_seq": {
+        "llm_plan": [
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"]
+        ],
+        "object": [
+          ["Sink|+01.38|+00.81|-01.27", []], 
+          "Microwave|-02.58|+00.90|+02.44"
+        ]
+      },
+      "removed_object": "Tomato|+01.30|+00.96|-01.08"
+    },
+    "task4": {
+      "prompts": "Place all items from the CounterTop into the Drawer",
+      "action_seq": {
+        "llm_plan": [
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"]
+        ],
+        "object": [
+          ["CounterTop|-00.36|+00.95|+01.09", ["Bowl|-00.65|+00.90|+01.26", "Cup|-00.65|+00.90|+00.74"]], 
+          "Drawer|-02.28|+00.79|+01.37"
+        ]
+      },
+      "removed_object": "Apple|-00.48|+00.97|+00.41"
+    },
+    "task5": {
+      "prompts": "Move all items from the Drawer to the CounterTop",
+      "action_seq": {
+        "llm_plan": [
+          ["navigate", "open_receptacle", "pick_object", "navigate", "put_object", "close_receptacle", "standby"]
+        ],
+        "object": [
+          ["Drawer|-02.28|+00.79|+01.37", ["SaltShaker|+01.67|+00.90|+00.45", "ButterKnife|+01.44|+00.90|+00.43"]], 
+          "CounterTop|+01.59|+00.95|+00.41"
+        ]
+      },
+      "removed_object": "Fork|+01.44|+00.90|+00.34"
+    }
+  }
+  

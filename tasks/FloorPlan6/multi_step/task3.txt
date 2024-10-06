@@ -1,0 +1,519 @@
+Task: task3
+Prompt: Place the Tomato in the Fridge
+Action: navigate, Object: Sink|+01.38|+00.81|-01.27, Target: None
+Action: pick_object, Object: Tomato|+01.30|+00.96|-01.08, Target: None
+Action: navigate, Object: Fridge|-02.48|+00.00|-00.78, Target: None
+Action: open_receptacle, Object: Fridge|-02.48|+00.00|-00.78, Target: None
+Action: put_object, Object: Tomato|+01.30|+00.96|-01.08, Target: Fridge|-02.48|+00.00|-00.78
+Action: close_receptacle, Object: Fridge|-02.48|+00.00|-00.78, Target: None
+Action: standby, Object: Agent, Target: None
+None
+None
+None
+Failed to pick Tomato|+01.30|+00.96|-01.08 in Sink|+01.38|+00.81|-01.27. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Fridge|-02.48|+00.00|-00.78": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Sink|+01.38|+00.81|-01.27": {
+        "contains": [
+            "Tomato|+01.30|+00.96|-01.08"
+        ],
+        "State": "clear"
+    },
+    "Microwave|-02.58|+00.90|+02.44": {
+        "contains": [
+            "Apple|-00.48|+00.97|+00.41"
+        ],
+        "State": "Closed"
+    },
+    "CounterTop|+01.59|+00.95|+00.41": {
+        "contains": [
+            "ButterKnife|+01.44|+00.90|+00.43",
+            "Fork|+01.44|+00.90|+00.34"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-00.36|+00.95|+01.09": {
+        "contains": [
+            "Bowl|-00.65|+00.90|+01.26",
+            "Cup|-00.65|+00.90|+00.74"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.28|+00.79|+01.37": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Cabinet|+00.15|+02.01|-01.60": {
+        "contains": [
+            "SaltShaker|+01.67|+00.90|+00.45"
+        ],
+        "State": "Closed"
+    }
+}
+Prompt: Place the Tomato in the Fridge, Action history: [], Action feedback: Failed to pick Tomato|+01.30|+00.96|-01.08 in Sink|+01.38|+00.81|-01.27. Skip this action and move to the rest of plan., Feedback count: 0
+Action: navigate, Object: Fridge|-02.48|+00.00|-00.78, Target: None
+Action: open_receptacle, Object: Fridge|-02.48|+00.00|-00.78, Target: None
+Action: navigate, Object: Sink|+01.38|+00.81|-01.27, Target: None
+Action: pick_object, Object: Tomato|+01.30|+00.96|-01.08, Target: Sink|+01.38|+00.81|-01.27
+Action: navigate, Object: Fridge|-02.48|+00.00|-00.78, Target: None
+Action: put_object, Object: Tomato|+01.30|+00.96|-01.08, Target: Fridge|-02.48|+00.00|-00.78
+Action: close_receptacle, Object: Fridge|-02.48|+00.00|-00.78, Target: None
+Action: standby, Object: Agent, Target: None
+None
+None
+None
+None
+None
+None
+None
+Failed to pick Tomato|+01.30|+00.96|-01.08 in Sink|+01.38|+00.81|-01.27. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Fridge|-02.48|+00.00|-00.78": {
+        "contains": [],
+        "State": "Open"
+    },
+    "Sink|+01.38|+00.81|-01.27": {
+        "contains": [
+            "Tomato|+01.30|+00.96|-01.08"
+        ],
+        "State": "clear"
+    },
+    "Microwave|-02.58|+00.90|+02.44": {
+        "contains": [
+            "Apple|-00.48|+00.97|+00.41"
+        ],
+        "State": "Closed"
+    },
+    "CounterTop|+01.59|+00.95|+00.41": {
+        "contains": [
+            "ButterKnife|+01.44|+00.90|+00.43",
+            "Fork|+01.44|+00.90|+00.34"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-00.36|+00.95|+01.09": {
+        "contains": [
+            "Bowl|-00.65|+00.90|+01.26",
+            "Cup|-00.65|+00.90|+00.74"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.28|+00.79|+01.37": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Cabinet|+00.15|+02.01|-01.60": {
+        "contains": [
+            "SaltShaker|+01.67|+00.90|+00.45"
+        ],
+        "State": "Closed"
+    }
+}
+Prompt: Place the Tomato in the Fridge, Action history: [], Action feedback: Failed to pick Tomato|+01.30|+00.96|-01.08 in Sink|+01.38|+00.81|-01.27. Skip this action and move to the rest of plan., Feedback count: 1
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Fridge|-02.48|+00.00|-00.78": {
+        "contains": [],
+        "State": "Open"
+    },
+    "Sink|+01.38|+00.81|-01.27": {
+        "contains": [
+            "Tomato|+01.30|+00.96|-01.08"
+        ],
+        "State": "clear"
+    },
+    "Microwave|-02.58|+00.90|+02.44": {
+        "contains": [
+            "Apple|-00.48|+00.97|+00.41"
+        ],
+        "State": "Closed"
+    },
+    "CounterTop|+01.59|+00.95|+00.41": {
+        "contains": [
+            "ButterKnife|+01.44|+00.90|+00.43",
+            "Fork|+01.44|+00.90|+00.34"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-00.36|+00.95|+01.09": {
+        "contains": [
+            "Bowl|-00.65|+00.90|+01.26",
+            "Cup|-00.65|+00.90|+00.74"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.28|+00.79|+01.37": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Cabinet|+00.15|+02.01|-01.60": {
+        "contains": [
+            "SaltShaker|+01.67|+00.90|+00.45"
+        ],
+        "State": "Closed"
+    }
+}
+__________________________________________________
+{
+    "CounterTop|-00.36|+00.95|+01.09": {
+        "contains": [
+            "Bowl|-00.65|+00.90|+01.26",
+            "Cup|-00.65|+00.90|+00.74"
+        ],
+        "State": "clear"
+    },
+    "Cabinet|+00.15|+02.01|-01.60": {
+        "contains": [
+            "SaltShaker|+01.67|+00.90|+00.45"
+        ],
+        "State": "Closed"
+    },
+    "CounterTop|+01.59|+00.95|+00.41": {
+        "contains": [
+            "Fork|+01.44|+00.90|+00.34",
+            "ButterKnife|+01.44|+00.90|+00.43"
+        ],
+        "State": "clear"
+    },
+    "Sink|+01.38|+00.81|-01.27": {
+        "contains": [
+            "Tomato|+01.29|+00.96|-01.08"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.28|+00.79|+01.37": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Fridge|-02.48|+00.00|-00.78": {
+        "contains": [],
+        "State": "Open"
+    },
+    "Microwave|-02.58|+00.90|+02.44": {
+        "contains": [
+            "Apple|-00.48|+00.97|+00.41"
+        ],
+        "State": "Closed"
+    }
+}
+Prompt: Open and Close the Drawer
+Action: navigate, Object: Drawer|-02.28|+00.79|+01.37, Target: None
+Action: open_receptacle, Object: Drawer|-02.28|+00.79|+01.37, Target: None
+Action: close_receptacle, Object: Drawer|-02.28|+00.79|+01.37, Target: None
+Action: standby, Object: , Target: None
+None
+None
+None
+None
+None
+None
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Fridge|-02.48|+00.00|-00.78": {
+        "contains": [],
+        "State": "Open"
+    },
+    "Sink|+01.38|+00.81|-01.27": {
+        "contains": [
+            "Tomato|+01.30|+00.96|-01.08"
+        ],
+        "State": "clear"
+    },
+    "Microwave|-02.58|+00.90|+02.44": {
+        "contains": [
+            "Apple|-00.48|+00.97|+00.41"
+        ],
+        "State": "Closed"
+    },
+    "CounterTop|+01.59|+00.95|+00.41": {
+        "contains": [
+            "ButterKnife|+01.44|+00.90|+00.43",
+            "Fork|+01.44|+00.90|+00.34"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-00.36|+00.95|+01.09": {
+        "contains": [
+            "Bowl|-00.65|+00.90|+01.26",
+            "Cup|-00.65|+00.90|+00.74"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.28|+00.79|+01.37": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Cabinet|+00.15|+02.01|-01.60": {
+        "contains": [
+            "SaltShaker|+01.67|+00.90|+00.45"
+        ],
+        "State": "Closed"
+    }
+}
+__________________________________________________
+{
+    "CounterTop|-00.36|+00.95|+01.09": {
+        "contains": [
+            "Bowl|-00.65|+00.90|+01.26",
+            "Cup|-00.65|+00.90|+00.74"
+        ],
+        "State": "clear"
+    },
+    "Cabinet|+00.15|+02.01|-01.60": {
+        "contains": [
+            "SaltShaker|+01.67|+00.90|+00.45"
+        ],
+        "State": "Closed"
+    },
+    "CounterTop|+01.59|+00.95|+00.41": {
+        "contains": [
+            "Fork|+01.44|+00.90|+00.34",
+            "ButterKnife|+01.44|+00.90|+00.43"
+        ],
+        "State": "clear"
+    },
+    "Sink|+01.38|+00.81|-01.27": {
+        "contains": [
+            "Tomato|+01.29|+00.96|-01.08"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.28|+00.79|+01.37": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Fridge|-02.48|+00.00|-00.78": {
+        "contains": [],
+        "State": "Open"
+    },
+    "Microwave|-02.58|+00.90|+02.44": {
+        "contains": [
+            "Apple|-00.48|+00.97|+00.41"
+        ],
+        "State": "Closed"
+    }
+}
+Prompt: Cook the Tomato in the Microwave
+Action: navigate, Object: Sink|+01.38|+00.81|-01.27, Target: None
+Action: pick_object, Object: Tomato|+01.30|+00.96|-01.08, Target: None
+Action: navigate, Object: Microwave|-02.58|+00.90|+02.44, Target: None
+Action: open_receptacle, Object: Microwave|-02.58|+00.90|+02.44, Target: None
+Action: put_object, Object: Tomato|+01.30|+00.96|-01.08, Target: Microwave|-02.58|+00.90|+02.44
+Action: close_receptacle, Object: Microwave|-02.58|+00.90|+02.44, Target: None
+Action: standby, Object: , Target: None
+None
+None
+None
+Failed to pick Tomato|+01.30|+00.96|-01.08 in Sink|+01.38|+00.81|-01.27. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Fridge|-02.48|+00.00|-00.78": {
+        "contains": [],
+        "State": "Open"
+    },
+    "Sink|+01.38|+00.81|-01.27": {
+        "contains": [
+            "Tomato|+01.30|+00.96|-01.08"
+        ],
+        "State": "clear"
+    },
+    "Microwave|-02.58|+00.90|+02.44": {
+        "contains": [
+            "Apple|-00.48|+00.97|+00.41"
+        ],
+        "State": "Closed"
+    },
+    "CounterTop|+01.59|+00.95|+00.41": {
+        "contains": [
+            "ButterKnife|+01.44|+00.90|+00.43",
+            "Fork|+01.44|+00.90|+00.34"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-00.36|+00.95|+01.09": {
+        "contains": [
+            "Bowl|-00.65|+00.90|+01.26",
+            "Cup|-00.65|+00.90|+00.74"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.28|+00.79|+01.37": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Cabinet|+00.15|+02.01|-01.60": {
+        "contains": [
+            "SaltShaker|+01.67|+00.90|+00.45"
+        ],
+        "State": "Closed"
+    }
+}
+Prompt: Cook the Tomato in the Microwave, Action history: ['Place the Tomato in the Fridge', 'Open and Close the Drawer'], Action feedback: Failed to pick Tomato|+01.30|+00.96|-01.08 in Sink|+01.38|+00.81|-01.27. Skip this action and move to the rest of plan., Feedback count: 0
+Action: navigate, Object: Sink|+01.38|+00.81|-01.27, Target: None
+Action: pick_object, Object: Tomato|+01.30|+00.96|-01.08, Target: Sink|+01.38|+00.81|-01.27
+Action: navigate, Object: Microwave|-02.58|+00.90|+02.44, Target: None
+Action: open_receptacle, Object: Microwave|-02.58|+00.90|+02.44, Target: None
+Action: put_object, Object: Tomato|+01.30|+00.96|-01.08, Target: Microwave|-02.58|+00.90|+02.44
+Action: close_receptacle, Object: Microwave|-02.58|+00.90|+02.44, Target: None
+Action: standby, Object: Agent, Target: None
+None
+None
+None
+Failed to pick Tomato|+01.30|+00.96|-01.08 in Sink|+01.38|+00.81|-01.27. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Fridge|-02.48|+00.00|-00.78": {
+        "contains": [],
+        "State": "Open"
+    },
+    "Sink|+01.38|+00.81|-01.27": {
+        "contains": [
+            "Tomato|+01.30|+00.96|-01.08"
+        ],
+        "State": "clear"
+    },
+    "Microwave|-02.58|+00.90|+02.44": {
+        "contains": [
+            "Apple|-00.48|+00.97|+00.41"
+        ],
+        "State": "Closed"
+    },
+    "CounterTop|+01.59|+00.95|+00.41": {
+        "contains": [
+            "ButterKnife|+01.44|+00.90|+00.43",
+            "Fork|+01.44|+00.90|+00.34"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-00.36|+00.95|+01.09": {
+        "contains": [
+            "Bowl|-00.65|+00.90|+01.26",
+            "Cup|-00.65|+00.90|+00.74"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.28|+00.79|+01.37": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Cabinet|+00.15|+02.01|-01.60": {
+        "contains": [
+            "SaltShaker|+01.67|+00.90|+00.45"
+        ],
+        "State": "Closed"
+    }
+}
+Prompt: Cook the Tomato in the Microwave, Action history: ['Place the Tomato in the Fridge', 'Open and Close the Drawer'], Action feedback: Failed to pick Tomato|+01.30|+00.96|-01.08 in Sink|+01.38|+00.81|-01.27. Skip this action and move to the rest of plan., Feedback count: 1
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Fridge|-02.48|+00.00|-00.78": {
+        "contains": [],
+        "State": "Open"
+    },
+    "Sink|+01.38|+00.81|-01.27": {
+        "contains": [
+            "Tomato|+01.30|+00.96|-01.08"
+        ],
+        "State": "clear"
+    },
+    "Microwave|-02.58|+00.90|+02.44": {
+        "contains": [
+            "Apple|-00.48|+00.97|+00.41"
+        ],
+        "State": "Closed"
+    },
+    "CounterTop|+01.59|+00.95|+00.41": {
+        "contains": [
+            "ButterKnife|+01.44|+00.90|+00.43",
+            "Fork|+01.44|+00.90|+00.34"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-00.36|+00.95|+01.09": {
+        "contains": [
+            "Bowl|-00.65|+00.90|+01.26",
+            "Cup|-00.65|+00.90|+00.74"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.28|+00.79|+01.37": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Cabinet|+00.15|+02.01|-01.60": {
+        "contains": [
+            "SaltShaker|+01.67|+00.90|+00.45"
+        ],
+        "State": "Closed"
+    }
+}
+__________________________________________________
+{
+    "CounterTop|-00.36|+00.95|+01.09": {
+        "contains": [
+            "Bowl|-00.65|+00.90|+01.26",
+            "Cup|-00.65|+00.90|+00.74"
+        ],
+        "State": "clear"
+    },
+    "Cabinet|+00.15|+02.01|-01.60": {
+        "contains": [
+            "SaltShaker|+01.67|+00.90|+00.45"
+        ],
+        "State": "Closed"
+    },
+    "CounterTop|+01.59|+00.95|+00.41": {
+        "contains": [
+            "Fork|+01.44|+00.90|+00.34",
+            "ButterKnife|+01.44|+00.90|+00.43"
+        ],
+        "State": "clear"
+    },
+    "Sink|+01.38|+00.81|-01.27": {
+        "contains": [
+            "Tomato|+01.29|+00.96|-01.08"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.28|+00.79|+01.37": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Fridge|-02.48|+00.00|-00.78": {
+        "contains": [],
+        "State": "Open"
+    },
+    "Microwave|-02.58|+00.90|+02.44": {
+        "contains": [
+            "Apple|-00.48|+00.97|+00.41"
+        ],
+        "State": "Closed"
+    }
+}
+==================================================

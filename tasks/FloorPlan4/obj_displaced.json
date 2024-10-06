@@ -1,0 +1,30 @@
+{
+  "task2": {
+    "prompts": ["Put the Knife on the Dining Table", "Put the Apple in the Fridge", "Put the Knife on the CounterTop"],
+    "action_seq": {
+      "llm_plan": [
+        ["navigate", "pick_object", "navigate", "put_object", "standby"],
+        ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"],
+        ["navigate", "pick_object", "navigate", "put_object", "standby"]        ],
+      "object": [
+        ["Sink|-01.39|+00.98|+00.44|SinkBasin", ["Knife|-01.48|+00.93|+00.42", "Sink|-01.39|+00.98|+00.44|SinkBasin"], "DiningTable|-00.62|+00.02|+02.49", ["Knife|-01.48|+00.93|+00.42", "DiningTable|-00.62|+00.02|+02.49"], ""],
+        ["CounterTop|-02.28|+01.16|+00.38", ["Apple|-02.48|+01.18|+00.48", "CounterTop|-02.28|+01.16|+00.38"], "Fridge|-03.52|+00.00|+02.72", "Fridge|-03.52|+00.00|+02.72", ["Apple|-02.48|+01.18|+00.48", "Fridge|-03.52|+00.00|+02.72"], "Fridge|-03.52|+00.00|+02.72", "Agent"],
+        ["DiningTable|-00.62|+00.02|+02.49", ["Knife|-01.48|+00.93|+00.42", "DiningTable|-00.62|+00.02|+02.49"], "CounterTop|-03.86|+01.16|+00.38", ["Knife|-01.48|+00.93|+00.42", "CounterTop|-03.86|+01.16|+00.38"], ""]        ]
+    },
+    "task1": {
+      "prompts": ["Put the Bowl in the Sink", "Open and Close the Microwave", "Put the Bowl in the Microwave"],
+      "action_seq": {
+        "llm_plan": [
+          ["navigate", "pick_object", "navigate", "put_object", "standby"],
+          ["navigate", "open_receptacle", "close_receptacle", "standby"],
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"]
+        ],
+        "object": [
+          ["DiningTable|-00.62|+00.02|+02.49", ["Bowl|-00.50|+01.04|+02.22", "DiningTable|-00.62|+00.02|+02.49"], "Sink|-01.39|+00.98|+00.44|SinkBasin", ["Bowl|-00.50|+01.04|+02.22", "Sink|-01.39|+00.98|+00.44|SinkBasin"], "Agent"],
+          ["Microwave|-00.37|+01.11|+00.43", "Microwave|-00.37|+01.11|+00.43", "Microwave|-00.37|+01.11|+00.43", "Agent"],
+          ["Sink|-01.39|+00.98|+00.44|SinkBasin", ["Bowl|-00.50|+01.04|+02.22", "Sink|-01.39|+00.98|+00.44|SinkBasin"], "Microwave|-00.37|+01.11|+00.43", "Microwave|-00.37|+01.11|+00.43", ["Bowl|-00.50|+01.04|+02.22", "Microwave|-00.37|+01.11|+00.43"], "Microwave|-00.37|+01.11|+00.43", "Agent"]        ]
+      }
+    }
+    }
+  }
+  

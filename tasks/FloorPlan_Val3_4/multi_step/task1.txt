@@ -1,0 +1,2604 @@
+Task: task1
+Prompt: Put the Laptop on the bed
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: None
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: standby, Object: , Target: None
+None
+None
+None
+Failed to pick Laptop|+05.91|+00.33|-02.82 in Sofa|+05.70|+00.01|-02.27. Skip this action and move to the rest of plan.
+{
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the Laptop on the bed, Action history: [], Action feedback: Failed to pick Laptop|+05.91|+00.33|-02.82 in Sofa|+05.70|+00.01|-02.27. Skip this action and move to the rest of plan., Feedback count: 0
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: standby, Object: Robot, Target: None
+None
+None
+{
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63"
+        ],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    }
+}
+Prompt: Put the pillow on the Sofa
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: Pillow|+01.90|+00.60|-01.63, Target: None
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: Pillow|+01.90|+00.60|-01.63, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: Robot, Target: None
+None
+None
+None
+None
+None
+None
+Task: task1
+Prompt: Put the Laptop on the bed
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: None
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: standby, Object: Robot, Target: None
+None
+None
+None
+Failed to pick Laptop|+05.91|+00.33|-02.82 in Sofa|+05.70|+00.01|-02.27. Skip this action and move to the rest of plan.
+{
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the Laptop on the bed, Action history: [], Action feedback: Failed to pick Laptop|+05.91|+00.33|-02.82 in Sofa|+05.70|+00.01|-02.27. Skip this action and move to the rest of plan., Feedback count: 0
+Task: task1
+Prompt: Put the Laptop on the bed
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: None
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: standby, Object: Agent, Target: None
+None
+None
+None
+Failed to pick Laptop|+05.91|+00.33|-02.82 in Sofa|+05.70|+00.01|-02.27. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the Laptop on the bed, Action history: [], Action feedback: Failed to pick Laptop|+05.91|+00.33|-02.82 in Sofa|+05.70|+00.01|-02.27. Skip this action and move to the rest of plan., Feedback count: 0
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Sofa|+05.70|+00.01|-02.27
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: standby, Object: , Target: None
+None
+None
+None
+Failed to pick Laptop|+05.91|+00.33|-02.82 in Sofa|+05.70|+00.01|-02.27. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the Laptop on the bed, Action history: [], Action feedback: Failed to pick Laptop|+05.91|+00.33|-02.82 in Sofa|+05.70|+00.01|-02.27. Skip this action and move to the rest of plan., Feedback count: 1
+Task: task1
+Prompt: Put the Laptop on the bed
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: None
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: standby, Object: , Target: None
+None
+None
+None
+None
+None
+None
+None
+None
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.68|-01.63",
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Mug|+03.66|+00.89|-01.31",
+            "Bottle|+03.11|+00.89|-01.33"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: Pillow|+01.90|+00.60|-01.63, Target: None
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: Pillow|+01.90|+00.60|-01.63, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: , Target: None
+None
+None
+None
+Failed to pick Pillow|+01.90|+00.60|-01.63 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa, Action history: ['Put the Laptop on the bed'], Action feedback: Failed to pick Pillow|+01.90|+00.60|-01.63 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan., Feedback count: 0
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: TennisRacket|+02.27|+00.61|-03.08, Target: Bed|+01.90|+00.00|-02.42
+Action: put_object, Object: TennisRacket|+02.27|+00.61|-03.08, Target: Shelf|+03.32|+00.88|-01.29
+Action: pick_object, Object: Pillow|+01.90|+00.60|-01.63, Target: Bed|+01.90|+00.00|-02.42
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: Pillow|+01.90|+00.60|-01.63, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: , Target: None
+None
+None
+None
+None
+None
+Failed to place TennisRacket|+02.27|+00.61|-03.08 in Shelf|+03.32|+00.88|-01.29. TennisRacket|+02.27|+00.61|-03.08 is in the hand of the Agent, Place it on some other receptacle and continue with the plan.
+{
+    "Agent": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08"
+        ],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa, Action history: ['Put the Laptop on the bed'], Action feedback: Failed to place TennisRacket|+02.27|+00.61|-03.08 in Shelf|+03.32|+00.88|-01.29. TennisRacket|+02.27|+00.61|-03.08 is in the hand of the Agent, Place it on some other receptacle and continue with the plan., Feedback count: 1
+{
+    "Agent": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08"
+        ],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Laptop|+05.91|+00.33|-02.82",
+            "Pillow|+01.90|+00.68|-01.63"
+        ],
+        "State": "clear"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Mug|+03.66|+00.89|-01.31",
+            "Bottle|+03.11|+00.89|-01.33"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Bring all electronic items on the couch
+Action: navigate, Object: CoffeeTable|+07.13|00.00|-02.32, Target: None
+Action: pick_object, Object: RemoteControl|+07.11|+00.48|-02.79, Target: None
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: RemoteControl, Target: Sofa|+05.70|+00.01|-02.27
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: None
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: Laptop, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: , Target: None
+None
+None
+None
+Failed to pick RemoteControl|+07.11|+00.48|-02.79 in CoffeeTable|+07.13|00.00|-02.32. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08"
+        ],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Bring all electronic items on the couch, Action history: ['Put the Laptop on the bed', 'Put the pillow on the Sofa'], Action feedback: Failed to pick RemoteControl|+07.11|+00.48|-02.79 in CoffeeTable|+07.13|00.00|-02.32. Skip this action and move to the rest of plan., Feedback count: 0
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: , Target: None
+None
+None
+None
+Failed to pick Laptop|+05.91|+00.33|-02.82 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08"
+        ],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Bring all electronic items on the couch, Action history: ['Put the Laptop on the bed', 'Put the pillow on the Sofa'], Action feedback: Failed to pick Laptop|+05.91|+00.33|-02.82 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan., Feedback count: 1
+{
+    "Agent": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08"
+        ],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Laptop|+05.91|+00.33|-02.82",
+            "Pillow|+01.90|+00.68|-01.63"
+        ],
+        "State": "clear"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Mug|+03.66|+00.89|-01.31",
+            "Bottle|+03.11|+00.89|-01.33"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+==================================================
+Task: task1
+Prompt: Put the Laptop on the bed
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: None
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: standby, Object: , Target: None
+None
+None
+None
+None
+None
+None
+None
+None
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.68|-01.63",
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Mug|+03.66|+00.89|-01.31",
+            "Bottle|+03.11|+00.89|-01.33"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: Pillow|+01.90|+00.60|-01.63, Target: None
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: Pillow|+01.90|+00.60|-01.63, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: , Target: None
+None
+None
+None
+Failed to pick Pillow|+01.90|+00.60|-01.63 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa, Action history: ['Put the Laptop on the bed'], Action feedback: Failed to pick Pillow|+01.90|+00.60|-01.63 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan., Feedback count: 0
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: TennisRacket|+02.27|+00.61|-03.08, Target: Bed|+01.90|+00.00|-02.42
+Action: put_object, Object: TennisRacket|+02.27|+00.61|-03.08, Target: Sofa|+05.70|+00.01|-02.27
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: pick_object, Object: Pillow|+01.90|+00.60|-01.63, Target: Bed|+01.90|+00.00|-02.42
+Action: put_object, Object: Pillow|+01.90|+00.60|-01.63, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: , Target: None
+None
+None
+None
+None
+None
+Failed to place TennisRacket|+02.27|+00.61|-03.08 in Sofa|+05.70|+00.01|-02.27. TennisRacket|+02.27|+00.61|-03.08 is in the hand of the Agent, Place it on some other receptacle and continue with the plan.
+{
+    "Agent": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08"
+        ],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa, Action history: ['Put the Laptop on the bed'], Action feedback: Failed to place TennisRacket|+02.27|+00.61|-03.08 in Sofa|+05.70|+00.01|-02.27. TennisRacket|+02.27|+00.61|-03.08 is in the hand of the Agent, Place it on some other receptacle and continue with the plan., Feedback count: 1
+{
+    "Agent": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08"
+        ],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Laptop|+05.91|+00.33|-02.82",
+            "Pillow|+01.90|+00.68|-01.63"
+        ],
+        "State": "clear"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Mug|+03.66|+00.89|-01.31",
+            "Bottle|+03.11|+00.89|-01.33"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Bring all electronic items on the couch
+Action: navigate, Object: CoffeeTable|+07.13|00.00|-02.32, Target: None
+Action: pick_object, Object: RemoteControl|+07.11|+00.48|-02.79, Target: None
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: RemoteControl|+07.11|+00.48|-02.79, Target: Sofa|+05.70|+00.01|-02.27
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: None
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: , Target: None
+None
+None
+None
+Failed to pick RemoteControl|+07.11|+00.48|-02.79 in CoffeeTable|+07.13|00.00|-02.32. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08"
+        ],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Bring all electronic items on the couch, Action history: ['Put the Laptop on the bed', 'Put the pillow on the Sofa'], Action feedback: Failed to pick RemoteControl|+07.11|+00.48|-02.79 in CoffeeTable|+07.13|00.00|-02.32. Skip this action and move to the rest of plan., Feedback count: 0
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: , Target: None
+None
+None
+None
+Failed to pick Laptop|+05.91|+00.33|-02.82 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08"
+        ],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Bring all electronic items on the couch, Action history: ['Put the Laptop on the bed', 'Put the pillow on the Sofa'], Action feedback: Failed to pick Laptop|+05.91|+00.33|-02.82 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan., Feedback count: 1
+{
+    "Agent": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08"
+        ],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Laptop|+05.91|+00.33|-02.82",
+            "Pillow|+01.90|+00.68|-01.63"
+        ],
+        "State": "clear"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Mug|+03.66|+00.89|-01.31",
+            "Bottle|+03.11|+00.89|-01.33"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+==================================================
+Task: task1
+Prompt: Put the Laptop on the bed
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: None
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: standby, Object: Agent, Target: None
+None
+None
+None
+None
+None
+None
+None
+None
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.68|-01.63",
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Mug|+03.66|+00.89|-01.31",
+            "Bottle|+03.11|+00.89|-01.33"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: Pillow|+01.90|+00.60|-01.63, Target: None
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: Pillow|+01.90|+00.60|-01.63, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: , Target: None
+None
+None
+None
+Failed to pick Pillow|+01.90|+00.60|-01.63 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa, Action history: ['Put the Laptop on the bed'], Action feedback: Failed to pick Pillow|+01.90|+00.60|-01.63 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan., Feedback count: 0
+Task: task1
+Prompt: Put the Laptop on the bed
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: None
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: standby, Object: , Target: None
+None
+None
+None
+None
+None
+None
+None
+None
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.68|-01.63",
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Mug|+03.66|+00.89|-01.31",
+            "Bottle|+03.11|+00.89|-01.33"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa
+Action: navigate, Object: Bed, Target: None
+Action: pick_object, Object: Pillow, Target: None
+Action: navigate, Object: Sofa, Target: None
+Action: put_object, Object: Pillow, Target: Sofa
+Action: standby, Object: , Target: None
+None
+Failed to navigate to None
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa, Action history: ['Put the Laptop on the bed'], Action feedback: Failed to navigate to None, Feedback count: 0
+Action: navigate, Object: Bed, Target: None
+Action: pick_object, Object: Pillow, Target: Bed
+Action: navigate, Object: Sofa, Target: None
+Action: put_object, Object: Pillow, Target: Sofa
+Action: standby, Object: Agent, Target: None
+None
+Failed to navigate to None
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa, Action history: ['Put the Laptop on the bed'], Action feedback: Failed to navigate to None, Feedback count: 1
+Task: task1
+Prompt: Put the Laptop on the bed
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: None
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: standby, Object: , Target: None
+None
+None
+None
+None
+None
+None
+None
+None
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.68|-01.63",
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Mug|+03.66|+00.89|-01.31",
+            "Bottle|+03.11|+00.89|-01.33"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa
+Task: task1
+Prompt: Put the Laptop on the bed
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: None
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: standby, Object: , Target: 
+None
+None
+None
+None
+None
+None
+None
+None
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.68|-01.63",
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Mug|+03.66|+00.89|-01.31",
+            "Bottle|+03.11|+00.89|-01.33"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa
+Action: navigate, Object: Bed, Target: None
+Action: pick_object, Object: Pillow, Target: None
+Action: navigate, Object: Sofa, Target: None
+Action: put_object, Object: Pillow, Target: Sofa
+Action: standby, Object: Agent, Target: None
+None
+Failed to navigate to None
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa, Action history: ['Put the Laptop on the bed'], Action feedback: Failed to navigate to None, Feedback count: 0
+Action: navigate, Object: Bed, Target: None
+Action: pick_object, Object: Pillow, Target: Bed
+Action: navigate, Object: Sofa, Target: None
+Action: put_object, Object: Pillow, Target: Sofa
+Action: standby, Object: , Target: None
+None
+Failed to navigate to None
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa, Action history: ['Put the Laptop on the bed'], Action feedback: Failed to navigate to None, Feedback count: 1
+Task: task1
+Prompt: Put the Laptop on the bed
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: None
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: standby, Object: Agent, Target: None
+None
+None
+None
+None
+None
+None
+None
+None
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.68|-01.63",
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Mug|+03.66|+00.89|-01.31",
+            "Bottle|+03.11|+00.89|-01.33"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: Pillow|+01.90|+00.60|-01.63, Target: None
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: Pillow|+01.90|+00.60|-01.63, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: , Target: None
+None
+None
+None
+Failed to pick Pillow|+01.90|+00.60|-01.63 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa, Action history: ['Put the Laptop on the bed'], Action feedback: Failed to pick Pillow|+01.90|+00.60|-01.63 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan., Feedback count: 0
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: Pillow|+01.90|+00.60|-01.63, Target: Bed|+01.90|+00.00|-02.42
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: Pillow|+01.90|+00.60|-01.63, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: Agent, Target: None
+None
+None
+None
+Failed to pick Pillow|+01.90|+00.60|-01.63 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa, Action history: ['Put the Laptop on the bed'], Action feedback: Failed to pick Pillow|+01.90|+00.60|-01.63 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan., Feedback count: 1
+Task: task1
+Prompt: Put the Laptop on the bed
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: None
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: standby, Object: , Target: None
+None
+None
+None
+None
+None
+None
+None
+None
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.68|-01.63",
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Mug|+03.66|+00.89|-01.31",
+            "Bottle|+03.11|+00.89|-01.33"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: Pillow|+01.90|+00.60|-01.63, Target: None
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: Pillow|+01.90|+00.60|-01.63, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: Agent, Target: None
+None
+None
+None
+Failed to pick Pillow|+01.90|+00.60|-01.63 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa, Action history: ['Put the Laptop on the bed'], Action feedback: Failed to pick Pillow|+01.90|+00.60|-01.63 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan., Feedback count: 0
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: Pillow|+01.90|+00.60|-01.63, Target: Bed|+01.90|+00.00|-02.42
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: Pillow|+01.90|+00.60|-01.63, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: , Target: None
+None
+None
+None
+Failed to pick Pillow|+01.90|+00.60|-01.63 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the pillow on the Sofa, Action history: ['Put the Laptop on the bed'], Action feedback: Failed to pick Pillow|+01.90|+00.60|-01.63 in Bed|+01.90|+00.00|-02.42. Skip this action and move to the rest of plan., Feedback count: 1
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63",
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Laptop|+05.91|+00.33|-02.82",
+            "Pillow|+01.90|+00.68|-01.63",
+            "TennisRacket|+02.27|+00.61|-03.08"
+        ],
+        "State": "clear"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Mug|+03.66|+00.89|-01.31",
+            "Bottle|+03.11|+00.89|-01.33"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Bring all electronic items on the couch
+Action: navigate, Object: Shelf|+03.32|+00.88|-01.29, Target: None
+Action: pick_object, Object: RemoteControl|+07.11|+00.48|-02.79, Target: None
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: RemoteControl|+07.11|+00.48|-02.79, Target: Sofa|+05.70|+00.01|-02.27
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: None
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: Agent, Target: None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Failed to place Laptop|+05.91|+00.33|-02.82 in Sofa|+05.70|+00.01|-02.27. Laptop|+05.91|+00.33|-02.82 is in the hand of the Agent, Place it on some other receptacle and continue with the plan.
+{
+    "Agent": {
+        "contains": [
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Bring all electronic items on the couch, Action history: ['Put the Laptop on the bed', 'Put the pillow on the Sofa'], Action feedback: Failed to place Laptop|+05.91|+00.33|-02.82 in Sofa|+05.70|+00.01|-02.27. Laptop|+05.91|+00.33|-02.82 is in the hand of the Agent, Place it on some other receptacle and continue with the plan., Feedback count: 0
+Action: navigate, Object: CoffeeTable|+07.13|00.00|-02.32, Target: None
+Action: pick_object, Object: RemoteControl|+07.11|+00.48|-02.79, Target: CoffeeTable|+07.13|00.00|-02.32
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: RemoteControl|+07.11|+00.48|-02.79, Target: Sofa|+05.70|+00.01|-02.27
+Action: navigate, Object: Bed|+01.90|+00.00|-02.42, Target: None
+Action: pick_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Bed|+01.90|+00.00|-02.42
+Action: navigate, Object: Sofa|+05.70|+00.01|-02.27, Target: None
+Action: put_object, Object: Laptop|+05.91|+00.33|-02.82, Target: Sofa|+05.70|+00.01|-02.27
+Action: standby, Object: , Target: None
+None
+None
+None
+Failed to pick RemoteControl|+07.11|+00.48|-02.79 in CoffeeTable|+07.13|00.00|-02.32. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Bring all electronic items on the couch, Action history: ['Put the Laptop on the bed', 'Put the pillow on the Sofa'], Action feedback: Failed to pick RemoteControl|+07.11|+00.48|-02.79 in CoffeeTable|+07.13|00.00|-02.32. Skip this action and move to the rest of plan., Feedback count: 1
+{
+    "Agent": {
+        "contains": [
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Bottle|+03.11|+00.89|-01.33",
+            "BasketBall|+02.69|+00.12|-01.38",
+            "Apple|+03.45|+00.63|-01.34",
+            "Mug|+03.66|+00.89|-01.31"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    },
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "TennisRacket|+02.27|+00.61|-03.08",
+            "Pillow|+01.90|+00.60|-01.63"
+        ],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "Bed|+01.90|+00.00|-02.42": {
+        "contains": [
+            "Pillow|+01.90|+00.68|-01.63",
+            "TennisRacket|+02.27|+00.61|-03.08"
+        ],
+        "State": "clear"
+    },
+    "CoffeeTable|+07.13|00.00|-02.32": {
+        "contains": [
+            "Laptop|+05.91|+00.33|-02.82"
+        ],
+        "State": "clear"
+    },
+    "Drawer|+08.58|+00.73|-04.48": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Shelf|+03.32|+00.88|-01.29": {
+        "contains": [
+            "Mug|+03.66|+00.89|-01.31",
+            "Bottle|+03.11|+00.89|-01.33"
+        ],
+        "State": "clear"
+    },
+    "SideTable|+08.15|+00.00|-04.68": {
+        "contains": [
+            "Book|+07.74|+00.89|-04.68"
+        ],
+        "State": "clear"
+    },
+    "Sofa|+05.70|+00.01|-02.27": {
+        "contains": [
+            "RemoteControl|+07.11|+00.48|-02.79"
+        ],
+        "State": "clear"
+    }
+}
+==================================================

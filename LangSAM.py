@@ -7,8 +7,8 @@ from io import BytesIO
 from lang_sam import LangSAM
 
 # image = "https://static01.nyt.com/images/2020/09/08/well/physed-cycle-walk/physed-cycle-walk-videoSixteenByNineJumbo1600-v2.jpg"
-image = "3.jpg"
-text_prompt = "Lettuce"
+image = "/home/hypatia/Sachin_Workspace/interactive-scene-graphs/exploration/CounterTop|-01.49|+00.95|+01.32.jpg"
+text_prompt = "Potato"
 
 def save_mask(mask_np, filename):
     mask_image = Image.fromarray((mask_np * 255).astype(np.uint8))

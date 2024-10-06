@@ -1,0 +1,458 @@
+{
+  "Agent": {
+    "parentReceptacles": [
+      "Floor|+00.00|+00.00|+00.00"
+    ],
+    "ObjectState": null
+  },
+  "Stove": {
+    "parentReceptacles": null,
+    "ObjectState": null
+  },
+  "Apple|+01.95|+00.87|+03.77": {
+    "parentReceptacles": [
+      "DiningTable|+02.42|+00.00|+03.93"
+    ],
+    "ObjectState": null
+  },
+  "Bottle|-01.08|+01.02|+02.51": {
+    "parentReceptacles": [
+      "CounterTop|-00.81|+01.06|+02.19"
+    ],
+    "ObjectState": null
+  },
+  "Bowl|+02.19|+00.83|+03.51": {
+    "parentReceptacles": [
+      "DiningTable|+02.42|+00.00|+03.93"
+    ],
+    "ObjectState": null
+  },
+  "Bread|+02.74|+01.09|+00.06": {
+    "parentReceptacles": [
+      "CounterTop|+02.81|+00.99|+00.68"
+    ],
+    "ObjectState": null
+  },
+  "ButterKnife|+02.27|+01.02|+00.89": {
+    "parentReceptacles": [
+      "CounterTop|+02.81|+00.99|+00.68"
+    ],
+    "ObjectState": null
+  },
+  "Cabinet|+02.47|+00.38|-00.49": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|-00.82|+02.22|+00.62": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+01.14|+00.39|-01.36": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|-00.36|+00.38|+02.63": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+02.75|+02.22|-01.69": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+01.88|+00.38|+01.02": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+02.47|+00.38|+00.38": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+01.89|+00.38|+01.01": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|-00.82|+02.22|+01.62": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+02.47|+00.38|-00.48": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+02.47|+00.47|+00.37": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+01.31|+00.47|+01.64": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+01.50|+02.48|-01.71": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|-00.66|+02.50|-00.87": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|-00.66|+02.50|+00.16": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+02.39|+02.48|-01.71": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|-00.36|+00.38|+00.27": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|-00.82|+02.22|+01.60": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|-00.66|+02.23|+00.59": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+02.75|+02.22|-00.84": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+02.75|+02.22|-00.83": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|-00.82|+02.22|+02.61": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+02.73|+02.23|-01.71": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+01.14|+02.23|-01.71": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+02.47|+00.38|-01.34": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|+02.75|+02.22|+00.02": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Cabinet|-00.36|+00.38|+01.71": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Chair|+01.62|+00.00|+04.31": {
+    "parentReceptacles": [
+      "Floor|+00.00|+00.00|+00.00"
+    ],
+    "ObjectState": null
+  },
+  "Chair|+02.76|+00.00|+03.09": {
+    "parentReceptacles": [
+      "Floor|+00.00|+00.00|+00.00"
+    ],
+    "ObjectState": null
+  },
+  "CoffeeMachine|-00.94|+01.02|+00.65": {
+    "parentReceptacles": [
+      "CounterTop|-00.81|+01.06|+02.19"
+    ],
+    "ObjectState": null
+  },
+  "CounterTop|+02.81|+00.99|+00.68": {
+    "parentReceptacles": null,
+    "ObjectState": null
+  },
+  "CounterTop|-00.81|+01.06|+02.19": {
+    "parentReceptacles": null,
+    "ObjectState": null
+  },
+  "Cup|-00.46|+01.02|+00.42": {
+    "parentReceptacles": [
+      "CounterTop|-00.81|+01.06|+02.19"
+    ],
+    "ObjectState": null
+  },
+  "DiningTable|+02.42|+00.00|+03.93": {
+    "parentReceptacles": [
+      "Floor|+00.00|+00.00|+00.00"
+    ],
+    "ObjectState": null
+  },
+  "DishSponge|-01.09|+01.02|+01.12": {
+    "parentReceptacles": [
+      "CounterTop|-00.81|+01.06|+02.19"
+    ],
+    "ObjectState": null
+  },
+  "Drawer|+01.65|+00.83|+01.67": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Drawer|-00.64|+00.83|+00.62": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Drawer|-00.64|+00.83|+01.95": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Drawer|+01.94|+00.83|+01.35": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Drawer|+02.69|+00.83|-00.27": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Drawer|+02.23|+00.83|+01.04": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Drawer|+02.52|+00.83|+00.72": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Drawer|+01.35|+00.84|-01.54": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Drawer|+02.69|+00.83|+00.16": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Drawer|+02.69|+00.83|-01.13": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Drawer|-00.64|+00.83|+02.42": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Drawer|+02.69|+00.83|-00.70": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Egg|-00.90|+00.76|-00.40": {
+    "parentReceptacles": [
+      "Fridge|-00.91|+00.00|-00.41"
+    ],
+    "ObjectState": null
+  },
+  "Faucet|-01.12|+01.01|+01.34": {
+    "parentReceptacles": [
+      "CounterTop|-00.81|+01.06|+02.19"
+    ],
+    "ObjectState": null
+  },
+  "Floor|+00.00|+00.00|+00.00": {
+    "parentReceptacles": null,
+    "ObjectState": null
+  },
+  "Fork|+02.38|+01.02|+00.97": {
+    "parentReceptacles": [
+      "CounterTop|+02.81|+00.99|+00.68"
+    ],
+    "ObjectState": null
+  },
+  "Fridge|-00.91|+00.00|-00.41": {
+    "parentReceptacles": [
+      "Floor|+00.00|+00.00|+00.00"
+    ],
+    "ObjectState": "Closed"
+  },
+  "GarbageCan|-00.95|-00.03|+02.83": {
+    "parentReceptacles": [
+      "Floor|+00.00|+00.00|+00.00"
+    ],
+    "ObjectState": null
+  },
+  "HousePlant|+02.17|+01.00|+02.09": {
+    "parentReceptacles": [
+      "CounterTop|+02.81|+00.99|+00.68"
+    ],
+    "ObjectState": null
+  },
+  "HousePlant|+02.52|+01.02|+01.82": {
+    "parentReceptacles": [
+      "CounterTop|+02.81|+00.99|+00.68"
+    ],
+    "ObjectState": null
+  },
+  "Knife|+01.72|+01.02|+01.72": {
+    "parentReceptacles": [
+      "CounterTop|+02.81|+00.99|+00.68"
+    ],
+    "ObjectState": null
+  },
+  "Ladle|+02.62|+01.04|-01.50": {
+    "parentReceptacles": [
+      "CounterTop|+02.81|+00.99|+00.68"
+    ],
+    "ObjectState": null
+  },
+  "Lettuce|+02.88|+01.07|-00.43": {
+    "parentReceptacles": [
+      "CounterTop|+02.81|+00.99|+00.68"
+    ],
+    "ObjectState": null
+  },
+  "LightSwitch|-00.10|+01.41|-02.07": {
+    "parentReceptacles": null,
+    "ObjectState": null
+  },
+  "Microwave|+01.94|+01.75|-01.83": {
+    "parentReceptacles": null,
+    "ObjectState": "Closed"
+  },
+  "Mug|-00.82|+00.84|+01.60": {
+    "parentReceptacles": [
+      "Sink|-00.72|+01.02|+01.33|SinkBasin"
+    ],
+    "ObjectState": null
+  },
+  "Pan|+02.04|+01.02|+01.78": {
+    "parentReceptacles": [
+      "CounterTop|+02.81|+00.99|+00.68"
+    ],
+    "ObjectState": null
+  },
+  "PaperTowelRoll|-01.09|+01.13|+01.83": {
+    "parentReceptacles": [
+      "CounterTop|-00.81|+01.06|+02.19"
+    ],
+    "ObjectState": null
+  },
+  "PepperShaker|+01.36|+01.02|-01.77": {
+    "parentReceptacles": [
+      "CounterTop|+02.81|+00.99|+00.68"
+    ],
+    "ObjectState": null
+  },
+  "Plate|+02.03|+00.83|+04.18": {
+    "parentReceptacles": [
+      "DiningTable|+02.42|+00.00|+03.93"
+    ],
+    "ObjectState": null
+  },
+  "Pot|+01.33|+00.03|-01.67": {
+    "parentReceptacles": [
+      "Cabinet|+01.14|+00.39|-01.36"
+    ],
+    "ObjectState": null
+  },
+  "Potato|-00.55|+01.06|+01.88": {
+    "parentReceptacles": [
+      "CounterTop|-00.81|+01.06|+02.19"
+    ],
+    "ObjectState": null
+  },
+  "SaltShaker|+01.47|+01.02|-01.71": {
+    "parentReceptacles": [
+      "CounterTop|+02.81|+00.99|+00.68"
+    ],
+    "ObjectState": null
+  },
+  "Sink|-00.72|+01.02|+01.33": {
+    "parentReceptacles": null,
+    "ObjectState": null
+  },
+  "Sink|-00.72|+01.02|+01.33|SinkBasin": {
+    "parentReceptacles": null,
+    "ObjectState": null
+  },
+  "SoapBottle|-00.78|+01.02|+01.80": {
+    "parentReceptacles": [
+      "CounterTop|-00.81|+01.06|+02.19"
+    ],
+    "ObjectState": null
+  },
+  "Spatula|+02.73|+01.03|-01.53": {
+    "parentReceptacles": [
+      "CounterTop|+02.81|+00.99|+00.68"
+    ],
+    "ObjectState": null
+  },
+  "Spoon|+02.20|+01.02|+01.02": {
+    "parentReceptacles": [
+      "CounterTop|+02.81|+00.99|+00.68"
+    ],
+    "ObjectState": null
+  },
+  "StoveBurner|+01.84|+01.02|-01.84": {
+    "parentReceptacles": [
+      "Stove"
+    ],
+    "ObjectState": null
+  },
+  "StoveBurner|+02.12|+01.02|-01.84": {
+    "parentReceptacles": [
+      "Stove"
+    ],
+    "ObjectState": null
+  },
+  "StoveBurner|+02.18|+01.02|-01.60": {
+    "parentReceptacles": [
+      "Stove"
+    ],
+    "ObjectState": null
+  },
+  "StoveBurner|+01.76|+01.02|-01.60": {
+    "parentReceptacles": [
+      "Stove"
+    ],
+    "ObjectState": null
+  },
+  "StoveKnob|+01.93|+01.04|-01.51": {
+    "parentReceptacles": [
+      "Stove"
+    ],
+    "ObjectState": null
+  },
+  "StoveKnob|+02.02|+01.04|-01.59": {
+    "parentReceptacles": [
+      "Stove"
+    ],
+    "ObjectState": null
+  },
+  "StoveKnob|+01.93|+01.04|-01.59": {
+    "parentReceptacles": [
+      "Stove"
+    ],
+    "ObjectState": null
+  },
+  "StoveKnob|+02.02|+01.04|-01.51": {
+    "parentReceptacles": [
+      "Stove"
+    ],
+    "ObjectState": null
+  },
+  "Toaster|-01.01|+01.02|+02.24": {
+    "parentReceptacles": [
+      "CounterTop|-00.81|+01.06|+02.19"
+    ],
+    "ObjectState": null
+  },
+  "Tomato|+01.97|+01.07|+01.37": {
+    "parentReceptacles": [
+      "CounterTop|+02.81|+00.99|+00.68"
+    ],
+    "ObjectState": null
+  },
+  "Window|+01.76|+01.61|+04.76": {
+    "parentReceptacles": null,
+    "ObjectState": null
+  },
+  "WineBottle|+02.85|+01.02|-01.66": {
+    "parentReceptacles": [
+      "CounterTop|+02.81|+00.99|+00.68"
+    ],
+    "ObjectState": null
+  }
+}

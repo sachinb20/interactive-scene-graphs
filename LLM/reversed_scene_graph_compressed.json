@@ -1,0 +1,193 @@
+[
+  {
+    "object": "Floor|+00.00|+00.00|+00.00",
+    "state": "clear",
+    "contains": [
+      {"object": "Agent", "state": "on"},
+      {"object": "GarbageCan|+01.65|00.00|+00.68", "state": "on"},
+      {"object": "Stool|+00.44|+00.01|+00.75", "state": "on"},
+      {"object": "Stool|-02.30|+00.01|+01.84", "state": "on"}
+    ]
+  },
+  {
+    "object": "Fridge|-02.48|+00.00|-00.78",
+    "state": "Close",
+    "contains": [
+      {"object": "Egg|-02.53|+00.60|-00.71", "state": "in"}
+    ]
+  },
+  {
+    "object": "Agent",
+    "state": "clear",
+    "contains": [
+      {"object": "Apple|-00.48|+00.97|+00.41", "state": "on"}
+    ]
+  },
+  {
+    "object": "CounterTop|-00.36|+00.95|+01.09",
+    "state": "clear",
+    "contains": [
+      {"object": "Bowl|-00.65|+00.90|+01.26", "state": "on"},
+      {"object": "Bread|-00.71|+00.98|+00.43", "state": "on"},
+      {"object": "Cup|-00.65|+00.90|+00.74", "state": "on"},
+      {"object": "Knife|-00.64|+00.91|+01.62", "state": "on"},
+      {"object": "Pan|+00.00|+00.90|+00.95", "state": "on"},
+      {"object": "Spoon|-00.66|+00.90|+01.38", "state": "on"}
+    ]
+  },
+  
+  {
+    "object": "CounterTop|+01.59|+00.95|+00.41",
+    "state": "clear",
+    "contains": [
+      {"object": "ButterKnife|+01.44|+00.91|+00.46", "state": "on"},
+      {"object": "Fork|+01.44|+00.90|+00.38", "state": "on"},
+      {"object": "PepperShaker|+01.76|+00.90|+00.37", "state": "on"},
+      {"object": "SaltShaker|+01.67|+00.90|+00.46", "state": "on"}
+    ]
+  },
+  {
+    "object": "Cabinet|-02.15|+00.40|-00.24",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Cabinet|-02.45|+02.15|-01.28",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Cabinet|-02.45|+01.95|+01.64",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Cabinet|-02.45|+01.95|+01.69",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Cabinet|-02.45|+02.15|-00.29",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Cabinet|-02.45|+01.95|+00.36",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Cabinet|-02.45|+01.95|+00.41",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Cabinet|+00.15|+02.01|-01.60",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Cabinet|-02.15|+00.40|+01.58",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Cabinet|-02.15|+00.40|+00.64",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Cabinet|-02.45|+01.95|+02.93",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Cabinet|-02.15|+00.40|+00.70",
+    "state": "Closed",
+    "contains": [
+      {"object": "Pot|-02.31|+00.11|+00.90", "state": "in"}
+    ]
+  },
+  {
+    "object": "Cabinet|-02.29|+01.97|-01.33",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Cabinet|+01.57|+02.01|-00.78",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Cabinet|+01.57|+02.01|+00.47",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "CounterTop|+00.47|+00.95|-01.63",
+    "state": "clear",
+    "contains": [
+      {"object": "CoffeeMachine|+00.46|+00.90|-01.81", "state": "on"},
+      {"object": "DishSponge|+01.74|+00.90|-00.86", "state": "on"},
+      {"object": "Kettle|+00.85|+00.90|-01.79", "state": "on"},
+      {"object": "PaperTowelRoll|+00.69|+01.01|-01.83", "state": "on"},
+      {"object": "SoapBottle|+01.02|+00.90|-01.65", "state": "on"}
+    ]
+  },
+  {
+    "object": "Drawer|-02.28|+00.79|+00.44",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Drawer|-02.28|+00.79|+00.90",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Drawer|-02.28|+00.79|-00.03",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Drawer|-02.28|+00.79|+01.37",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Kettle|+00.85|+00.90|-01.79",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Sink|+01.38|+00.81|-01.27|SinkBasin",
+    "state": "clear",
+    "contains": [
+      {"object": "Lettuce|+01.11|+00.83|-01.43", "state": "on"}
+    ]
+  },
+  {
+    "object": "CounterTop|-01.49|+00.95|+01.32",
+    "state": "clear",
+    "contains": [
+      {"object": "Microwave|-02.58|+00.90|+02.44", "state": "on"},
+      {"object": "Plate|-02.35|+00.90|+00.05", "state": "on"},
+      {"object": "Potato|-02.24|+00.94|-00.18", "state": "on"},
+      {"object": "Spatula|-02.31|+00.91|+00.33", "state": "on"},
+      {"object": "Toaster|-02.57|+00.90|+01.88", "state": "on"}
+    ]
+  },
+  {
+    "object": "Microwave|-02.58|+00.90|+02.44",
+    "state": "Closed",
+    "contains": []
+  },
+  {
+    "object": "Sink|+01.38|+00.81|-01.27",
+    "state": "clear",
+    "contains": [
+      {"object": "Mug|+01.45|+00.91|-01.23", "state": "on"},
+      {"object": "Tomato|+01.30|+00.96|-01.08", "state": "on"}
+    ]
+  }
+]

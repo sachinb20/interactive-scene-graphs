@@ -1,0 +1,319 @@
+{
+  "scene": [
+    {
+      "object": "Floor|+00.00|+00.00|+00.00",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "Agent",
+          "state": "on"
+        },
+        {
+          "object": "DiningTable|-02.26|00.00|+00.43",
+          "state": "on"
+        },
+        {
+          "object": "Fridge|-02.14|+00.00|-01.69",
+          "state": "on"
+        },
+        {
+          "object": "GarbageCan|-00.37|-00.03|+00.54",
+          "state": "on"
+        },
+        {
+          "object": "Stool|-01.48|+00.00|+00.41",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "CounterTop|+00.28|+00.95|+00.46",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "Apple|-00.05|+00.95|+00.30",
+          "state": "on"
+        },
+        {
+          "object": "CoffeeMachine|+00.62|+00.90|+00.60",
+          "state": "on"
+        },
+        {
+          "object": "Kettle|-00.06|+00.90|+00.64",
+          "state": "on"
+        },
+        {
+          "object": "SaltShaker|+00.73|+00.90|+00.25",
+          "state": "on"
+        },
+        {
+          "object": "Toaster|+00.31|+00.90|+00.55",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "DiningTable|-02.26|00.00|+00.43",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "Bowl|-02.48|+00.95|+00.23",
+          "state": "on"
+        },
+        {
+          "object": "Mug|-01.90|+00.94|+00.38",
+          "state": "on"
+        },
+        {
+          "object": "Pot|-02.38|+00.94|+00.58",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "CounterTop|-00.68|+00.95|-01.65",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "Bread|+01.30|+00.98|-01.53",
+          "state": "on"
+        },
+        {
+          "object": "Knife|+01.17|+00.91|-01.66",
+          "state": "on"
+        },
+        {
+          "object": "Microwave|-01.04|+00.90|-01.72",
+          "state": "on"
+        },
+        {
+          "object": "PaperTowelRoll|+01.26|+01.01|-01.86",
+          "state": "on"
+        },
+        {
+          "object": "Plate|-00.11|+00.90|-01.60",
+          "state": "on"
+        },
+        {
+          "object": "Sink|+00.71|+00.82|-01.77",
+          "state": "on"
+        },
+        {
+          "object": "SoapBottle|+00.02|+00.90|-01.85",
+          "state": "on"
+        },
+        {
+          "object": "Spatula|-00.44|+00.91|-01.47",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "CounterTop|+01.78|+00.95|+00.46",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "ButterKnife|+01.71|+00.90|+00.27",
+          "state": "on"
+        },
+        {
+          "object": "PepperShaker|+01.62|+00.90|+00.59",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "Cabinet|+00.06|+00.40|-01.35",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Cabinet|+01.67|+00.40|+00.15",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Cabinet|+01.08|+00.40|-01.35",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Cabinet|-00.40|+00.40|-01.35",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Cabinet|+01.97|+01.69|-01.65",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Cabinet|-00.19|+01.69|-01.65",
+      "state": "Closed",
+      "contains": [
+        {
+          "object": "Cup|-00.50|+01.32|-01.79",
+          "state": "in"
+        }
+      ]
+    },
+    {
+      "object": "Cabinet|-00.18|+00.40|+00.15",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Cabinet|+00.10|+00.40|-01.35",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Cabinet|-00.82|+00.40|-01.35",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Cabinet|+00.73|+00.40|+00.15",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Sink|+00.71|+00.82|-01.77",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "DishSponge|+00.78|+00.91|-01.81",
+          "state": "on"
+        },
+        {
+          "object": "Faucet|+00.58|+00.90|-01.89",
+          "state": "on"
+        },
+        {
+          "object": "Lettuce|+00.85|+00.99|-01.55",
+          "state": "on"
+        },
+        {
+          "object": "Potato|+00.92|+00.94|-01.71",
+          "state": "on"
+        },
+        {
+          "object": "Tomato|+00.72|+00.96|-01.48",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "Drawer|+00.50|+00.79|+00.30",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Drawer|+01.83|+00.79|+00.30",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Drawer|-00.15|+00.79|-01.50",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Drawer|-01.10|+00.79|-01.50",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Drawer|-00.59|+00.79|-01.50",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Drawer|+00.02|+00.79|+00.30",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Fridge|-02.14|+00.00|-01.69",
+      "state": "Closed",
+      "contains": [
+        {
+          "object": "Egg|-02.32|+00.80|-01.70",
+          "state": "in"
+        }
+      ]
+    },
+    {
+      "object": "Sink|+00.71|+00.82|-01.77|SinkBasin",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "Fork|+00.40|+00.77|-01.72",
+          "state": "on"
+        },
+        {
+          "object": "Spoon|+00.38|+00.77|-01.57",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "Kettle|-00.06|+00.90|+00.64",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Microwave|-01.04|+00.90|-01.72",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "StoveBurner|+01.01|+00.96|+00.29",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "Pan|+01.02|+00.96|+00.29",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "Stove",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "StoveBurner|+01.36|+00.96|+00.56",
+          "state": "on"
+        },
+        {
+          "object": "StoveBurner|+01.36|+00.96|+00.29",
+          "state": "on"
+        },
+        {
+          "object": "StoveBurner|+01.01|+00.96|+00.29",
+          "state": "on"
+        },
+        {
+          "object": "StoveBurner|+01.01|+00.96|+00.56",
+          "state": "on"
+        },
+        {
+          "object": "StoveKnob|+01.25|+00.91|+00.12",
+          "state": "on"
+        },
+        {
+          "object": "StoveKnob|+01.37|+00.91|+00.12",
+          "state": "on"
+        },
+        {
+          "object": "StoveKnob|+01.00|+00.91|+00.12",
+          "state": "on"
+        },
+        {
+          "object": "StoveKnob|+01.13|+00.91|+00.12",
+          "state": "on"
+        }
+      ]
+    }
+  ]
+}

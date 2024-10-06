@@ -1,0 +1,79 @@
+{
+    "task1": {
+      "prompts": ["Put the Fork in the Drawer", "Pick up the SaltShaker from the CounterTop and Place it in the Cabinet", "Move the Fork back to the CounterTop"],
+      "action_seq": {
+        "llm_plan": [
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"],
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"],
+          ["navigate", "open_receptacle", "pick_object", "navigate", "put_object", "standby"]
+        ],
+        "object": [
+          ["CounterTop|+01.59|+00.95|+00.41", ["Fork|+01.44|+00.90|+00.34", "CounterTop|+01.59|+00.95|+00.41"], "Drawer|-02.28|+00.79|+01.37", "Drawer|-02.28|+00.79|+01.37", ["Fork|+01.44|+00.90|+00.34", "Drawer|-02.28|+00.79|+01.37"], "Drawer|-02.28|+00.79|+01.37", "None"],
+          ["CounterTop|+01.59|+00.95|+00.41", ["SaltShaker|+01.67|+00.90|+00.45", "CounterTop|+01.59|+00.95|+00.41"], "Cabinet|+00.15|+02.01|-01.60", "Cabinet|+00.15|+02.01|-01.60", ["SaltShaker|+01.67|+00.90|+00.45", "Cabinet|+00.15|+02.01|-01.60"], "Cabinet|+00.15|+02.01|-01.60", "None"],
+          ["Drawer|-02.28|+00.79|+01.37", ["Fork|+01.44|+00.90|+00.34", "Drawer|-02.28|+00.79|+01.37"], "CounterTop|+01.59|+00.95|+00.41", ["Fork|+01.44|+00.90|+00.34", "CounterTop|+01.59|+00.95|+00.41"], "None"]
+        ]
+      }
+
+    },
+    "task2": {
+      "prompts": ["Put the Apple in the Sink", "Open and Close the Cabinet", "Cook the Apple in the Microwave"],
+      "action_seq": {
+        "llm_plan": [
+          ["navigate", "pick_object", "navigate", "put_object", "standby"],
+          ["navigate", "open_receptacle", "close_receptacle", "standby"],
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"]
+        ],
+        "object": [
+          ["CounterTop|-00.36|+00.95|+01.09", ["Apple|-00.48|+00.97|+00.41", "CounterTop|-00.36|+00.95|+01.09"], "Sink|+01.38|+00.81|-01.27", ["Apple|-00.48|+00.97|+00.41", "Sink|+01.38|+00.81|-01.27"], "None"],
+          ["Cabinet|+00.15|+02.01|-01.60", "Cabinet|+00.15|+02.01|-01.60"],
+          ["Sink|+01.38|+00.81|-01.27", ["Apple|-00.48|+00.97|+00.41", "Sink|+01.38|+00.81|-01.27"], "Microwave|-02.58|+00.90|+02.44", "Microwave|-02.58|+00.90|+02.44", ["Apple|-00.48|+00.97|+00.41", "Microwave|-02.58|+00.90|+02.44"], "Microwave|-02.58|+00.90|+02.44", "None"]
+        ]
+      }
+    },
+    "task3": {
+      "prompts": ["Place the Tomato in the Fridge", "Open and Close the Drawer", "Cook the Tomato in the Microwave"],
+      "action_seq": {
+        "llm_plan": [
+          ["navigate", "pick_object", "navigate", "put_object", "standby"],
+          ["navigate", "open_receptacle", "close_receptacle", "standby"],
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"]
+        ],
+        "object": [
+          ["CounterTop|+01.59|+00.95|+00.41", ["Tomato|+01.30|+00.96|-01.08", "CounterTop|+01.59|+00.95|+00.41"], "Sink|+01.38|+00.81|-01.27", ["Tomato|+01.30|+00.96|-01.08", "Sink|+01.38|+00.81|-01.27"], "None"],
+          ["Drawer|-02.28|+00.79|+01.37", "Drawer|-02.28|+00.79|+01.37"],
+          ["Sink|+01.38|+00.81|-01.27", ["Tomato|+01.30|+00.96|-01.08", "Sink|+01.38|+00.81|-01.27"], "Microwave|-02.58|+00.90|+02.44", "Microwave|-02.58|+00.90|+02.44", ["Tomato|+01.30|+00.96|-01.08", "Microwave|-02.58|+00.90|+02.44"], "Microwave|-02.58|+00.90|+02.44", "None"]
+        ]
+      }
+    },
+    "task4": {
+      "prompts": ["Put the Cup in the Sink", "Pick up the ButterKnife from the CounterTop and Place it in the Drawer", "Move the Cup to the Microwave"],
+      "action_seq": {
+        "llm_plan": [
+          ["navigate", "pick_object", "navigate", "put_object", "standby"],
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"],
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"]
+        ],
+        "object": [
+          ["CounterTop|-00.36|+00.95|+01.09", ["Cup|-00.65|+00.90|+00.74", "CounterTop|-00.36|+00.95|+01.09"], "Sink|+01.38|+00.81|-01.27", ["Cup|-00.65|+00.90|+00.74", "Sink|+01.38|+00.81|-01.27"], "None"],
+          ["CounterTop|+01.59|+00.95|+00.41", ["ButterKnife|+01.44|+00.90|+00.43", "CounterTop|+01.59|+00.95|+00.41"], "Drawer|-02.28|+00.79|+01.37", "Drawer|-02.28|+00.79|+01.37", ["ButterKnife|+01.44|+00.90|+00.43", "Drawer|-02.28|+00.79|+01.37"], "Drawer|-02.28|+00.79|+01.37", "None"],
+          ["Sink|+01.38|+00.81|-01.27", ["Cup|-00.65|+00.90|+00.74", "Sink|+01.38|+00.81|-01.27"], "Microwave|-02.58|+00.90|+02.44", "Microwave|-02.58|+00.90|+02.44", ["Cup|-00.65|+00.90|+00.74", "Microwave|-02.58|+00.90|+02.44"], "Microwave|-02.58|+00.90|+02.44", "None"]
+        ]
+      }
+    },
+    "task5": {
+      "prompts": ["Put the ButterKnife in the Drawer", "Open and Close the Fridge", "Move the ButterKnife to the CounterTop"],
+      "action_seq": {
+        "llm_plan": [
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"],
+          ["navigate", "open_receptacle", "close_receptacle", "standby"],
+          ["navigate", "open_receptacle", "pick_object", "navigate", "put_object", "standby"]
+        ],
+        "object": [
+          ["CounterTop|+01.59|+00.95|+00.41", ["ButterKnife|+01.44|+00.90|+00.43", "CounterTop|+01.59|+00.95|+00.41"], "Drawer|-02.28|+00.79|+01.37", "Drawer|-02.28|+00.79|+01.37", ["ButterKnife|+01.44|+00.90|+00.43", "Drawer|-02.28|+00.79|+01.37"], "Drawer|-02.28|+00.79|+01.37", "None"],
+          ["Fridge|-02.48|+00.00|-00.78", "Fridge|-02.48|+00.00|-00.78"],
+          ["Drawer|-02.28|+00.79|+01.37", ["ButterKnife|+01.44|+00.90|+00.43", "Drawer|-02.28|+00.79|+01.37"], "CounterTop|+01.59|+00.95|+00.41", ["ButterKnife|+01.44|+00.90|+00.43", "CounterTop|+01.59|+00.95|+00.41"], "None"]
+        ]
+      }
+    }
+  }
+  

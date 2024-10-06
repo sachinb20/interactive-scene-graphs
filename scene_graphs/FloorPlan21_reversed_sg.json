@@ -1,0 +1,277 @@
+{
+  "scene": [
+    {
+      "object": "Floor|+00.00|+00.00|+00.00",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "Agent",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "Shelf|+00.77|+00.23|+00.44",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "AluminumFoil|+00.84|+00.22|+00.39",
+          "state": "on"
+        },
+        {
+          "object": "AluminumFoil|+00.75|+00.23|+00.29",
+          "state": "on"
+        },
+        {
+          "object": "AluminumFoil|+00.76|+00.23|+00.34",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "DiningTable|-01.93|-00.04|-01.40",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "Apple|-01.90|+00.87|-01.40",
+          "state": "on"
+        },
+        {
+          "object": "Bowl|-02.04|+00.83|-01.17",
+          "state": "on"
+        },
+        {
+          "object": "Plate|-01.99|+00.83|-01.59",
+          "state": "on"
+        },
+        {
+          "object": "Potato|-01.82|+00.87|-01.00",
+          "state": "on"
+        },
+        {
+          "object": "Tomato|-01.65|+00.88|-01.14",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "Blinds|-02.34|+02.15|-02.44",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "DiningTable|-00.35|-00.03|+00.86",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "Bread|-00.87|+00.93|+00.99",
+          "state": "on"
+        },
+        {
+          "object": "Lettuce|-00.28|+00.97|+01.15",
+          "state": "on"
+        },
+        {
+          "object": "Toaster|-00.52|+00.89|+01.08",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "Cabinet|+00.72|+01.82|+00.67",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Cabinet|+00.51|+00.35|-00.43",
+      "state": "Closed",
+      "contains": [
+        {
+          "object": "Pan|+00.74|-00.01|-00.60",
+          "state": "in"
+        }
+      ]
+    },
+    {
+      "object": "Cabinet|+00.72|+01.82|-00.40",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "Cabinet|+00.51|+00.35|+00.16",
+      "state": "Closed",
+      "contains": [
+        {
+          "object": "SoapBottle|+00.66|-00.01|-00.11",
+          "state": "in"
+        }
+      ]
+    },
+    {
+      "object": "Floor|+01.10|-00.03|+01.32",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "Chair|-01.61|-00.02|-01.42",
+          "state": "on"
+        },
+        {
+          "object": "DiningTable|-01.91|-00.03|-03.51",
+          "state": "on"
+        },
+        {
+          "object": "DiningTable|-01.93|-00.04|-01.40",
+          "state": "on"
+        },
+        {
+          "object": "Fridge|+00.68|-00.03|-01.96",
+          "state": "on"
+        },
+        {
+          "object": "GarbageBag|-00.77|-00.03|-03.54",
+          "state": "on"
+        },
+        {
+          "object": "GarbageCan|-01.26|-00.03|-03.61",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "CounterTop|+00.79|+00.92|-00.11",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "Cup|+00.95|+00.87|+00.02",
+          "state": "on"
+        },
+        {
+          "object": "DishSponge|+01.02|+00.87|-00.29",
+          "state": "on"
+        },
+        {
+          "object": "Faucet|+01.03|+00.87|-00.68",
+          "state": "on"
+        },
+        {
+          "object": "Fork|+00.65|+00.87|-00.07",
+          "state": "on"
+        },
+        {
+          "object": "Spatula|+00.78|+00.88|-00.05",
+          "state": "on"
+        },
+        {
+          "object": "Spoon|+00.61|+00.87|-00.20",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "Drawer|+00.71|+00.77|-00.13",
+      "state": "Closed",
+      "contains": [
+        {
+          "object": "Knife|+00.74|+00.76|-00.19",
+          "state": "in"
+        }
+      ]
+    },
+    {
+      "object": "Sink|+00.75|+00.88|-00.68|SinkBasin",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "Egg|+00.75|+00.80|-00.56",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "Fridge|+00.68|-00.03|-01.96",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "DiningTable|-01.91|-00.03|-03.51",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "Microwave|-01.99|+00.69|-03.65",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "Microwave|-01.99|+00.69|-03.65",
+      "state": "Closed",
+      "contains": []
+    },
+    {
+      "object": "SideTable|+00.77|-00.03|+00.44",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "Mug|+00.79|+00.66|+00.55",
+          "state": "on"
+        },
+        {
+          "object": "PepperShaker|+00.89|+00.66|+00.26",
+          "state": "on"
+        },
+        {
+          "object": "SaltShaker|+00.88|+00.66|+00.34",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "StoveBurner|-02.10|+00.89|+00.79",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "Pot|-02.07|+00.93|+00.77",
+          "state": "on"
+        }
+      ]
+    },
+    {
+      "object": "Stove",
+      "state": "clear",
+      "contains": [
+        {
+          "object": "StoveBurner|-02.10|+00.89|+01.05",
+          "state": "on"
+        },
+        {
+          "object": "StoveBurner|-01.55|+00.89|+00.79",
+          "state": "on"
+        },
+        {
+          "object": "StoveBurner|-02.10|+00.89|+00.79",
+          "state": "on"
+        },
+        {
+          "object": "StoveBurner|-01.56|+00.89|+01.05",
+          "state": "on"
+        },
+        {
+          "object": "StoveKnob|-02.06|+00.87|+00.52",
+          "state": "on"
+        },
+        {
+          "object": "StoveKnob|-01.60|+00.87|+00.52",
+          "state": "on"
+        },
+        {
+          "object": "StoveKnob|-01.75|+00.87|+00.52",
+          "state": "on"
+        },
+        {
+          "object": "StoveKnob|-01.90|+00.87|+00.52",
+          "state": "on"
+        }
+      ]
+    }
+  ]
+}

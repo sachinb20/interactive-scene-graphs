@@ -1,0 +1,280 @@
+{
+  "scene": {
+    "Floor|+00.00|+00.00|+00.00": {
+      "state": "clear",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": [
+        "Agent",
+        "Cabinet|-00.73|+00.39|+00.57",
+        "Cabinet|-01.26|+00.39|+00.57",
+        "Cabinet|-01.29|+00.39|+00.56",
+        "Cabinet|-02.24|+00.39|+00.56",
+        "Fridge|-02.78|+00.00|+02.22",
+        "GarbageCan|-00.33|+00.00|+02.61",
+        "Stool|-01.01|+00.01|+01.96"
+      ]
+    },
+    "Sink|-01.84|+00.73|+00.34|SinkBasin": {
+      "state": "clear",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": [
+        "Apple|-01.53|+00.75|+00.30",
+        "Lettuce|-01.84|+00.76|+00.27"
+      ]
+    },
+    "Cabinet|-00.55|+00.39|+00.75": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": [
+        "Bowl|-00.40|+00.12|+00.91"
+      ]
+    },
+    "CounterTop|-01.56|+00.86|+00.28": {
+      "state": "clear",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": [
+        "Bread|-00.98|+00.86|+00.25",
+        "ButterKnife|-02.49|+00.82|+00.48",
+        "CoffeeMachine|-00.54|+00.81|+00.19",
+        "Cup|-02.68|+00.81|+00.77",
+        "DishSponge|-02.23|+00.84|+00.34",
+        "Fork|-01.21|+00.81|+00.50",
+        "Knife|-02.66|+00.82|+00.56",
+        "Microwave|-02.79|+00.81|+01.35",
+        "Pan|-00.39|+00.81|+01.11",
+        "PepperShaker|-00.11|+00.81|+01.08",
+        "Plate|-02.59|+00.81|+00.31",
+        "Potato|-00.24|+00.85|+01.33",
+        "SaltShaker|-00.12|+00.81|+00.99",
+        "SoapBottle|-02.25|+00.81|+00.20",
+        "Spoon|-01.22|+00.81|+00.31",
+        "Toaster|-00.17|+00.81|+00.74"
+      ]
+    },
+    "Cabinet|-02.38|+02.02|+01.72": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": []
+    },
+    "Cabinet|-00.55|+00.39|+01.41": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": [
+        "Mug|-00.35|+00.12|+01.25"
+      ]
+    },
+    "Cabinet|-00.73|+00.39|+00.57": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": []
+    },
+    "Cabinet|-01.26|+00.39|+00.57": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": []
+    },
+    "Cabinet|-01.29|+00.39|+00.56": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": []
+    },
+    "Cabinet|-02.24|+00.39|+00.56": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": []
+    },
+    "Cabinet|-02.44|+00.39|+01.67": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": []
+    },
+    "Cabinet|-02.38|+02.01|+02.58": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": []
+    },
+    "Cabinet|-02.78|+01.80|+00.82": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": []
+    },
+    "Cabinet|-02.46|+01.80|+00.23": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": []
+    },
+    "Cabinet|-02.77|+01.80|+00.51": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": []
+    },
+    "Cabinet|-02.78|+01.80|+00.83": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": []
+    },
+    "Drawer|-02.59|+00.70|+01.51": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": []
+    },
+    "Drawer|-01.13|+00.71|+00.42": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": []
+    },
+    "Drawer|-00.86|+00.71|+00.42": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": []
+    },
+    "Drawer|-00.40|+00.70|+00.91": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": [
+        "Ladle|-00.38|+00.71|+00.88"
+      ]
+    },
+    "Drawer|-00.40|+00.70|+01.25": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": [
+        "Spatula|-00.34|+00.69|+01.19"
+      ]
+    },
+    "Fridge|-02.78|+00.00|+02.22": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": [
+        "Egg|-02.74|+00.83|+02.41",
+        "Tomato|-02.67|+01.18|+02.37"
+      ]
+    },
+    "Microwave|-02.79|+00.81|+01.35": {
+      "state": "Closed",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": []
+    },
+    "StoveBurner|-00.52|+00.82|+02.08": {
+      "state": "clear",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": [
+        "Pot|-00.53|+00.82|+02.10"
+      ]
+    },
+    "Stove": {
+      "state": "clear",
+      "pose": [
+        []
+      ],
+      "camera_pose": 30,
+      "crouch": "False",
+      "contains": [
+        "StoveBurner|-00.52|+00.82|+01.68",
+        "StoveBurner|-00.24|+00.82|+01.68",
+        "StoveBurner|-00.52|+00.82|+02.08",
+        "StoveBurner|-00.24|+00.82|+02.08",
+        "StoveKnob|-00.07|+01.00|+02.02",
+        "StoveKnob|-00.07|+01.00|+02.17",
+        "StoveKnob|-00.07|+01.00|+01.77",
+        "StoveKnob|-00.07|+01.00|+01.61"
+      ]
+    }
+  }
+}

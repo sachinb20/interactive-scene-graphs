@@ -1,0 +1,19 @@
+{
+    "task1": {
+      "prompts": ["Put the Laptop on the bed", "Put the pillow on the Sofa", "Bring all electronic items on the couch"],
+      "action_seq": {
+        "llm_plan": [
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"],
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"],
+          ["navigate", "open_receptacle", "pick_object", "navigate", "put_object", "standby"]
+        ],
+        "object": [
+          ["CounterTop|+01.59|+00.95|+00.41", ["Fork|+01.44|+00.90|+00.34", "CounterTop|+01.59|+00.95|+00.41"], "Drawer|-02.28|+00.79|+01.37", "Drawer|-02.28|+00.79|+01.37", ["Fork|+01.44|+00.90|+00.34", "Drawer|-02.28|+00.79|+01.37"], "Drawer|-02.28|+00.79|+01.37", "None"],
+          ["CounterTop|+01.59|+00.95|+00.41", ["SaltShaker|+01.67|+00.90|+00.45", "CounterTop|+01.59|+00.95|+00.41"], "Cabinet|+00.15|+02.01|-01.60", "Cabinet|+00.15|+02.01|-01.60", ["SaltShaker|+01.67|+00.90|+00.45", "Cabinet|+00.15|+02.01|-01.60"], "Cabinet|+00.15|+02.01|-01.60", "None"],
+          ["Drawer|-02.28|+00.79|+01.37", ["Fork|+01.44|+00.90|+00.34", "Drawer|-02.28|+00.79|+01.37"], "CounterTop|+01.59|+00.95|+00.41", ["Fork|+01.44|+00.90|+00.34", "CounterTop|+01.59|+00.95|+00.41"], "None"]
+        ]
+      }
+
+    }
+  }
+  

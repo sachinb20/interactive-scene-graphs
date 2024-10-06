@@ -1,23 +1,131 @@
 import numpy as np
 import cv2
 import math
-from isg import create_scene_graph, update_scene_graph
+from sg_utils import reverse_json, filter_sg,create_scene_graph_from_metadata
 from utils import closest_position, calculate_object_center
 import json
 import random
+import os
+# def get_obj_id(input_key, data):
+#     input_key = input_key.lower()
+#     matching_keys = []
+#     for key in data.keys():
+#         if key.lower().startswith(input_key):
+#             matching_keys.append(key)
+#     return matching_keys[0]
+
+def metadata_scene_graph(controller, scene_graph):
+# Create a new scene graph with receptacleObjectIds populated
+    metadata_scene_graph = {}
+
+    # Map the receptacleObjectIds from controller.last_event metadata
+    for obj in controller.last_event.metadata["objects"]:
+        object_id = obj["objectId"]
+        receptacle_object_ids = obj.get("receptacleObjectIds", [])
+        if obj["openable"]:
+            if obj["isOpen"]:
+                object_state = "Open"
+            else:
+                object_state = "Closed"
+        else:
+            object_state = "clear"
+        
+        # Copy the data from the original scene graph but replace 'contains' with receptacleObjectIds
+        if object_id in scene_graph:
+            metadata_scene_graph[object_id] = scene_graph[object_id].copy()
+            metadata_scene_graph[object_id]["contains"] = receptacle_object_ids
+            metadata_scene_graph[object_id]["State"] = object_state
+
+    return metadata_scene_graph
+def disable_objects(controller, scene):
+    with open(f'/home/hypatia/Sachin_Workspace/interactive-scene-graphs/sg_data/disabled_objects/{scene}.txt', 'r') as file:
+        lines = file.readlines()
+
+    # Loop through each line in the file and call controller.step for each object
+    for line in lines:
+        # Strip any extra whitespace
+        line = line.strip()
+        print(line)
+        # Call the controller.step function with the formatted action and objectId
+        controller.step(
+            action="DisableObject",
+            objectId=line
+        )
+
+        
+
+
+def get_only_obj_ids(data):
+    keys_and_objects = set()
+    for key, value in data.items():
+        
+        if "contains" in value:
+            
+            objects = set(value["contains"])
+            keys_and_objects = keys_and_objects.union(objects)
+
+    return keys_and_objects  
+
+def get_obj_rec_ids(data):
+    try:
+        # Initialize a set with the keys of the data
+        keys_and_objects = set(data.keys())
+        
+        # Loop through the dictionary
+        for key, value in data.items():
+            try:
+                # Check if "contains" exists in the value (value should be a dictionary)
+                if "contains" in value:
+                    # Add the objects contained within to the keys_and_objects set
+                    objects = set(value["contains"])
+                    keys_and_objects = keys_and_objects.union(objects)
+            except KeyError:
+                print(f"KeyError: 'contains' not found for key {key}")
+            except TypeError:
+                print(f"TypeError: Expected a dictionary for key {key}, got {type(value)}")
+
+        return keys_and_objects
+    except Exception as e:
+        print(f"Unexpected error in get_obj_rec_ids: {e}")
+        return set()
+
 
 def get_obj_id(input_key, data):
-    input_key = input_key.lower()
-    matching_keys = []
-    for key in data.keys():
-        if key.lower().startswith(input_key):
-            matching_keys.append(key)
-    return matching_keys[0]
+    try:
+        # Retrieve all keys and object IDs
+        keys_and_objects = get_obj_rec_ids(data)
 
-def save_frame(controller,state):
+        # Normalize the input key to lowercase
+        input_key = input_key.lower()
+        matching_keys = []
+        
+        # Check for matching keys
+        for key in keys_and_objects:
+            if key.lower().startswith(input_key):
+                matching_keys.append(key)
 
+        # Ensure at least one match is found, otherwise raise an error
+        if not matching_keys:
+            raise ValueError(f"No matching keys found for input '{input_key}'")
+
+        return matching_keys[0]
+    
+    except ValueError as ve:
+        print(ve)
+        return None  # or handle it as appropriate
+    except Exception as e:
+        print(f"Unexpected error in get_obj_id: {e}")
+        return None
+
+
+def save_frame(controller,state,folder_name = "action_images/"):
+
+    os.makedirs(folder_name, exist_ok=True)
     bgr_frame = cv2.cvtColor(controller.last_event.frame, cv2.COLOR_RGB2BGR)
-    cv2.imwrite("action_images/"+state+'.jpg', bgr_frame)
+    file_path = os.path.join(folder_name, f"{state}.jpg")
+    
+    # Save the image
+    cv2.imwrite(file_path, bgr_frame)
 
     return bgr_frame
 
@@ -81,7 +189,7 @@ def change_scene(controller):
     )
     print(event.metadata["lastActionSuccess"])
 
-    scene_graph, object_list = create_scene_graph(event.metadata["objects"])
+    scene_graph, object_list = create_scene_graph_from_metadata(event.metadata["objects"])
 
     # Save scene graph to a file
     file_path = "scene_graph_modified.json"

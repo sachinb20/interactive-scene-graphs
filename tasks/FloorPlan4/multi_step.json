@@ -1,0 +1,117 @@
+{
+
+
+    "task4": {
+      "prompts": ["Put the ButterKnife in the Drawer and DishSponge on the Dining Table", "Put the Apple and Tomato in the Fridge", "Put the Pot in the sink and bring an item to wash the pot in the sink"],
+      "action_seq": {
+        "llm_plan": [
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"],
+          ["navigate", "open_receptacle", "close_receptacle", "standby"],
+          ["navigate", "open_receptacle", "pick_object", "navigate", "put_object", "standby"]
+        ],
+        "object": [
+          ["CounterTop|+01.59|+00.95|+00.41", ["ButterKnife|+01.44|+00.90|+00.43", "CounterTop|+01.59|+00.95|+00.41"], "Drawer|-02.28|+00.79|+01.37", "Drawer|-02.28|+00.79|+01.37", ["ButterKnife|+01.44|+00.90|+00.43", "Drawer|-02.28|+00.79|+01.37"], "Drawer|-02.28|+00.79|+01.37", "None"],
+          ["Fridge|-02.48|+00.00|-00.78", "Fridge|-02.48|+00.00|-00.78"],
+          ["Drawer|-02.28|+00.79|+01.37", ["ButterKnife|+01.44|+00.90|+00.43", "Drawer|-02.28|+00.79|+01.37"], "CounterTop|+01.59|+00.95|+00.41", ["ButterKnife|+01.44|+00.90|+00.43", "CounterTop|+01.59|+00.95|+00.41"], "None"]
+        ]
+      }
+    },
+    "task5": {
+      "prompts": ["Put the cuttlery (spoons, knives and forks) in the drawer", "Put the Apple in the Fridge and leave the door open", "Keep the knife on the Dining Table and close the fridge"],
+"action_seq": {
+    "llm_plan": [
+        ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "navigate", "pick_object", "navigate", "put_object", "navigate", "pick_object", "navigate", "put_object", "navigate", "pick_object", "navigate", "put_object", "close_receptacle", "standby"],
+        ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"],
+        ["navigate", "pick_object", "navigate", "put_object", "standby"]
+    ],
+    "object": [
+        [
+            "CounterTop|-02.28|+01.16|+00.38", 
+            ["Ladle|-01.95|+01.14|+00.45", "ButterKnife|-02.63|+01.11|+00.60", "Spoon|-00.43|+01.04|+01.90", "Fork|-00.46|+01.04|+01.78"], 
+            "Drawer|-02.50|+00.22|+00.59", 
+            "Drawer|-02.50|+00.22|+00.59", 
+            ["Ladle|-01.95|+01.14|+00.45", "Drawer|-02.50|+00.22|+00.59"], 
+            ["ButterKnife|-02.63|+01.11|+00.60", "Drawer|-02.50|+00.22|+00.59"], 
+            ["Spoon|-00.43|+01.04|+01.90", "Drawer|-02.50|+00.22|+00.59"], 
+            ["Fork|-00.46|+01.04|+01.78", "Drawer|-02.50|+00.22|+00.59"], 
+            "Drawer|-02.50|+00.22|+00.59", 
+            "None"
+        ],
+        [
+            "CounterTop|-02.28|+01.16|+00.38", 
+            ["Apple|-02.48|+01.18|+00.48", "CounterTop|-02.28|+01.16|+00.38"], 
+            "Fridge|-03.52|+00.00|+02.72", 
+            "Fridge|-03.52|+00.00|+02.72", 
+            ["Apple|-02.48|+01.18|+00.48", "Fridge|-03.52|+00.00|+02.72"], 
+            "Fridge|-03.52|+00.00|+02.72", 
+            "None"
+        ],
+        [
+            "Drawer|-02.50|+00.22|+00.59", 
+            ["Knife|-01.48|+00.93|+00.42", "Drawer|-02.50|+00.22|+00.59"], 
+            "DiningTable|-00.62|+00.02|+02.49", 
+            ["Knife|-01.48|+00.93|+00.42", "DiningTable|-00.62|+00.02|+02.49"], 
+            "None"
+        ]
+    ]
+}
+
+    },
+
+    "task1": {
+      "prompts": ["Put the cup in the Microwave", "Pick up the SaltShaker from the CounterTop and Place it in the Dining Table", "Place the cup in the sink"],
+      "action_seq": {
+        "llm_plan": [
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"],
+          ["navigate", "pick_object", "navigate", "put_object", "standby"],
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"]
+          
+        ],
+        "object": [
+          ["Sink|-01.39|+00.98|+00.44|SinkBasin", ["Cup|-01.58|+00.92|+00.34", "Sink|-01.39|+00.98|+00.44|SinkBasin"], "Microwave|-00.37|+01.11|+00.43", "Microwave|-00.37|+01.11|+00.43", ["Cup|-01.58|+00.92|+00.34", "Microwave|-00.37|+01.11|+00.43"], "Microwave|-00.37|+01.11|+00.43", "None"],
+          ["CounterTop|+01.59|+00.95|+00.41", ["SaltShaker|+01.67|+00.90|+00.45", "CounterTop|+01.59|+00.95|+00.41"], "Cabinet|+00.15|+02.01|-01.60", "Cabinet|+00.15|+02.01|-01.60", ["SaltShaker|+01.67|+00.90|+00.45", "Cabinet|+00.15|+02.01|-01.60"], "Cabinet|+00.15|+02.01|-01.60", "None"],
+          ["Sink|-01.39|+00.98|+00.44|SinkBasin", ["Cup|-01.58|+00.92|+00.34", "Sink|-01.39|+00.98|+00.44|SinkBasin"], "Microwave|-00.37|+01.11|+00.43", "Microwave|-00.37|+01.11|+00.43", ["Cup|-01.58|+00.92|+00.34", "Microwave|-00.37|+01.11|+00.43"], "Microwave|-00.37|+01.11|+00.43", "None"]
+        ]
+      }
+
+    },
+
+    "task2": {
+      "prompts": ["Put the cup in the Microwave and leave the door open", "Pick up the SaltShaker and Place it on the Dining Table", "Place the cup in the sink and close the microwave door"],
+      "action_seq": {
+        "llm_plan": [
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"],
+          ["navigate", "pick_object", "navigate", "put_object", "standby"],
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"]
+          
+        ],
+        "object": [
+          ["Sink|-01.39|+00.98|+00.44|SinkBasin", ["Cup|-01.58|+00.92|+00.34", "Sink|-01.39|+00.98|+00.44|SinkBasin"], "Microwave|-00.37|+01.11|+00.43", "Microwave|-00.37|+01.11|+00.43", ["Cup|-01.58|+00.92|+00.34", "Microwave|-00.37|+01.11|+00.43"], "Microwave|-00.37|+01.11|+00.43", "None"],
+          ["CounterTop|+01.59|+00.95|+00.41", ["SaltShaker|+01.67|+00.90|+00.45", "CounterTop|+01.59|+00.95|+00.41"], "Cabinet|+00.15|+02.01|-01.60", "Cabinet|+00.15|+02.01|-01.60", ["SaltShaker|+01.67|+00.90|+00.45", "Cabinet|+00.15|+02.01|-01.60"], "Cabinet|+00.15|+02.01|-01.60", "None"],
+          ["Sink|-01.39|+00.98|+00.44|SinkBasin", ["Cup|-01.58|+00.92|+00.34", "Sink|-01.39|+00.98|+00.44|SinkBasin"], "Microwave|-00.37|+01.11|+00.43", "Microwave|-00.37|+01.11|+00.43", ["Cup|-01.58|+00.92|+00.34", "Microwave|-00.37|+01.11|+00.43"], "Microwave|-00.37|+01.11|+00.43", "None"]
+        ]
+      }
+
+    },
+
+    "task3": {
+      "prompts": ["Put the Bowl in the Microwave", "Pick up the SaltShaker and Bowl and Place it on the Dining Table", "Put the Bowl in the sink"],
+      "action_seq": {
+        "llm_plan": [
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"],
+          ["navigate", "pick_object", "navigate", "put_object", "standby"],
+          ["navigate", "pick_object", "navigate", "open_receptacle", "put_object", "close_receptacle", "standby"]
+          
+        ],
+        "object": [
+          ["Sink|-01.39|+00.98|+00.44|SinkBasin", ["Cup|-01.58|+00.92|+00.34", "Sink|-01.39|+00.98|+00.44|SinkBasin"], "Microwave|-00.37|+01.11|+00.43", "Microwave|-00.37|+01.11|+00.43", ["Cup|-01.58|+00.92|+00.34", "Microwave|-00.37|+01.11|+00.43"], "Microwave|-00.37|+01.11|+00.43", "None"],
+          ["CounterTop|+01.59|+00.95|+00.41", ["SaltShaker|+01.67|+00.90|+00.45", "CounterTop|+01.59|+00.95|+00.41"], "Cabinet|+00.15|+02.01|-01.60", "Cabinet|+00.15|+02.01|-01.60", ["SaltShaker|+01.67|+00.90|+00.45", "Cabinet|+00.15|+02.01|-01.60"], "Cabinet|+00.15|+02.01|-01.60", "None"],
+          ["Sink|-01.39|+00.98|+00.44|SinkBasin", ["Cup|-01.58|+00.92|+00.34", "Sink|-01.39|+00.98|+00.44|SinkBasin"], "Microwave|-00.37|+01.11|+00.43", "Microwave|-00.37|+01.11|+00.43", ["Cup|-01.58|+00.92|+00.34", "Microwave|-00.37|+01.11|+00.43"], "Microwave|-00.37|+01.11|+00.43", "None"]
+        ]
+      }
+
+    }
+
+
+  }
+  

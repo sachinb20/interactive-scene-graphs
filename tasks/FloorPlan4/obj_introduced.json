@@ -1,0 +1,29 @@
+{
+  "task1": {
+    "prompts": ["Place all items from the Sink on the Dining Table"],
+
+    "removed_object": [["Sink|-01.39|+00.98|+00.44|SinkBasin","DishSponge|-01.12|+01.15|+00.09"]]
+  },
+    "task2": {
+      "prompts": ["Clear the Dining Table"],
+
+    "removed_object": [["DiningTable|-00.62|+00.02|+02.49","Bowl|-00.50|+01.04|+02.22"]]
+    },
+
+    "task3": {
+      "prompts": "Transfer all silverware (Spoons,knives,forks) from the Dining Table to the Drawer",
+
+      "removed_object": [["DiningTable|-00.62|+00.02|+02.49","Fork|-00.46|+01.04|+01.78"]]
+    },
+    "task4": {
+      "prompts": ["Clear the Dining Table"],
+
+    "removed_object": [["DiningTable|-00.62|+00.02|+02.49","Bowl|-00.50|+01.04|+02.22"],["DiningTable|-00.62|+00.02|+02.49","Tomato|-00.75|+01.08|+02.40"]]
+    },
+    "task5": {
+      "prompts": "Transfer all silverware (Spoons,knives,forks) from the Dining Table to the Drawer and clear the rest of the Dining Table",
+
+      "removed_object": [["DiningTable|-00.62|+00.02|+02.49","Fork|-00.46|+01.04|+01.78"],["DiningTable|-00.62|+00.02|+02.49","Bowl|-00.50|+01.04|+02.22"]]
+    }
+  }
+  
