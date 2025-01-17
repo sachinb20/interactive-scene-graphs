@@ -22,7 +22,7 @@ class PlanningAgent:
         # Patch the OpenAI client with instructor
         self.client = instructor.from_openai(openai.OpenAI())
 
-    def planner(self, embodiment, scene_graph, task):
+    def planner(self, embodiment, scene_graph, task, temperature):
         curr_chat_messages = [
             {
                 "role": "system",
@@ -72,7 +72,7 @@ class PlanningAgent:
             response_model=ActionSequence,
             messages=curr_chat_messages,
             max_tokens=1024,
-            temperature=0.6,
+            temperature=float(temperature),
             top_p=0.9,
         )
 
@@ -110,7 +110,8 @@ if __name__ == "__main__":
 
     # prompt = "Put the Lettuce in the Fridge."
             embodiment = "Bi-manipulation"
-            action_sequence = agent.planner(embodiment, sg, prompt)
+            temperature = 0.6
+            action_sequence = agent.planner(embodiment, sg, prompt, temperature)
             
             # Print the structured output
             for action in action_sequence.actions:

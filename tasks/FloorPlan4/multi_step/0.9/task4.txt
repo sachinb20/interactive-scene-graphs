@@ -1,0 +1,794 @@
+Task: task4
+Prompt: Put the ButterKnife in the Drawer and DishSponge on the Dining Table
+Action: navigate, Object: Drawer|-02.50|+00.22|+00.59, Target: None
+Action: open_receptacle, Object: Drawer|-02.50|+00.22|+00.59, Target: None
+Action: pick_object, Object: ButterKnife|-02.63|+01.11|+00.60, Target: None
+Action: put_object, Object: ButterKnife|-02.63|+01.11|+00.60, Target: Drawer|-02.50|+00.22|+00.59
+Action: close_receptacle, Object: Drawer|-02.50|+00.22|+00.59, Target: None
+Action: navigate, Object: DiningTable|-00.62|+00.02|+02.49, Target: None
+Action: pick_object, Object: DishSponge|-01.12|+01.15|+00.09, Target: None
+Action: put_object, Object: DishSponge|-01.12|+01.15|+00.09, Target: DiningTable|-00.62|+00.02|+02.49
+Action: standby, Object: Agent, Target: None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Failed to pick DishSponge|-01.12|+01.15|+00.09 in DiningTable|-00.62|+00.02|+02.49. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "CounterTop|-03.86|+01.16|+00.38": {
+        "contains": [
+            "SaltShaker|-03.76|+01.11|+00.52",
+            "PepperShaker|-03.76|+01.11|+00.39"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-02.28|+01.16|+00.38": {
+        "contains": [
+            "Ladle|-01.95|+01.14|+00.45"
+        ],
+        "State": "clear"
+    },
+    "DiningTable|-00.62|+00.02|+02.49": {
+        "contains": [
+            "Bowl|-00.50|+01.04|+02.22",
+            "Spoon|-00.43|+01.04|+01.90",
+            "Fork|-00.46|+01.04|+01.78",
+            "DishSponge|-01.12|+01.15|+00.09"
+        ],
+        "State": "clear"
+    },
+    "Sink|-01.39|+00.98|+00.44|SinkBasin": {
+        "contains": [
+            "Cup|-01.58|+00.92|+00.34",
+            "Knife|-01.48|+00.93|+00.42",
+            "Pot|-03.00|+01.14|+00.48"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.50|+00.22|+00.59": {
+        "contains": [
+            "ButterKnife|-02.63|+01.11|+00.60"
+        ],
+        "State": "Closed"
+    },
+    "Fridge|-03.52|+00.00|+02.72": {
+        "contains": [
+            "Apple|-02.48|+01.18|+00.48",
+            "Tomato|-00.75|+01.08|+02.40"
+        ],
+        "State": "Open"
+    },
+    "Microwave|-00.37|+01.11|+00.43": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "StoveBurner|-03.00|+01.10|+00.48": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Put the ButterKnife in the Drawer and DishSponge on the Dining Table, Action history: [], Action feedback: Failed to pick DishSponge|-01.12|+01.15|+00.09 in DiningTable|-00.62|+00.02|+02.49. Skip this action and move to the rest of plan., Feedback count: 0
+Action: navigate, Object: Drawer|-02.50|+00.22|+00.59, Target: None
+Action: open_receptacle, Object: Drawer|-02.50|+00.22|+00.59, Target: None
+Action: navigate, Object: CounterTop|-02.28|+01.16|+00.38, Target: None
+Action: pick_object, Object: ButterKnife|-02.63|+01.11|+00.60, Target: CounterTop|-02.28|+01.16|+00.38
+Action: navigate, Object: Drawer|-02.50|+00.22|+00.59, Target: None
+Action: put_object, Object: ButterKnife|-02.63|+01.11|+00.60, Target: Drawer|-02.50|+00.22|+00.59
+Action: close_receptacle, Object: Drawer|-02.50|+00.22|+00.59, Target: None
+Action: standby, Object: Agent, Target: None
+None
+None
+None
+None
+None
+Failed to navigate to CounterTop|-02.28|+01.16|+00.38
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "CounterTop|-03.86|+01.16|+00.38": {
+        "contains": [
+            "SaltShaker|-03.76|+01.11|+00.52",
+            "PepperShaker|-03.76|+01.11|+00.39"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-02.28|+01.16|+00.38": {
+        "contains": [
+            "Ladle|-01.95|+01.14|+00.45"
+        ],
+        "State": "clear"
+    },
+    "DiningTable|-00.62|+00.02|+02.49": {
+        "contains": [
+            "Bowl|-00.50|+01.04|+02.22",
+            "Spoon|-00.43|+01.04|+01.90",
+            "Fork|-00.46|+01.04|+01.78",
+            "DishSponge|-01.12|+01.15|+00.09"
+        ],
+        "State": "clear"
+    },
+    "Sink|-01.39|+00.98|+00.44|SinkBasin": {
+        "contains": [
+            "Cup|-01.58|+00.92|+00.34",
+            "Knife|-01.48|+00.93|+00.42",
+            "Pot|-03.00|+01.14|+00.48"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.50|+00.22|+00.59": {
+        "contains": [
+            "ButterKnife|-02.63|+01.11|+00.60"
+        ],
+        "State": "Open"
+    },
+    "Fridge|-03.52|+00.00|+02.72": {
+        "contains": [
+            "Apple|-02.48|+01.18|+00.48",
+            "Tomato|-00.75|+01.08|+02.40"
+        ],
+        "State": "Open"
+    },
+    "Microwave|-00.37|+01.11|+00.43": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "StoveBurner|-03.00|+01.10|+00.48": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Put the ButterKnife in the Drawer and DishSponge on the Dining Table, Action history: [], Action feedback: Failed to navigate to CounterTop|-02.28|+01.16|+00.38, Feedback count: 1
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "CounterTop|-03.86|+01.16|+00.38": {
+        "contains": [
+            "SaltShaker|-03.76|+01.11|+00.52",
+            "PepperShaker|-03.76|+01.11|+00.39"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-02.28|+01.16|+00.38": {
+        "contains": [
+            "Ladle|-01.95|+01.14|+00.45"
+        ],
+        "State": "clear"
+    },
+    "DiningTable|-00.62|+00.02|+02.49": {
+        "contains": [
+            "Bowl|-00.50|+01.04|+02.22",
+            "Spoon|-00.43|+01.04|+01.90",
+            "Fork|-00.46|+01.04|+01.78",
+            "DishSponge|-01.12|+01.15|+00.09"
+        ],
+        "State": "clear"
+    },
+    "Sink|-01.39|+00.98|+00.44|SinkBasin": {
+        "contains": [
+            "Cup|-01.58|+00.92|+00.34",
+            "Knife|-01.48|+00.93|+00.42",
+            "Pot|-03.00|+01.14|+00.48"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.50|+00.22|+00.59": {
+        "contains": [
+            "ButterKnife|-02.63|+01.11|+00.60"
+        ],
+        "State": "Open"
+    },
+    "Fridge|-03.52|+00.00|+02.72": {
+        "contains": [
+            "Apple|-02.48|+01.18|+00.48",
+            "Tomato|-00.75|+01.08|+02.40"
+        ],
+        "State": "Open"
+    },
+    "Microwave|-00.37|+01.11|+00.43": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "StoveBurner|-03.00|+01.10|+00.48": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "CounterTop|-02.28|+01.16|+00.38": {
+        "contains": [
+            "Ladle|-01.95|+01.14|+00.45",
+            "HousePlant|-02.16|+01.10|+00.17",
+            "Potato|-02.66|+01.15|+00.25",
+            "Apple|-02.48|+01.18|+00.48"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-03.86|+01.16|+00.38": {
+        "contains": [
+            "PepperShaker|-03.76|+01.11|+00.39",
+            "SaltShaker|-03.76|+01.11|+00.52"
+        ],
+        "State": "clear"
+    },
+    "DiningTable|-00.62|+00.02|+02.49": {
+        "contains": [
+            "CoffeeMachine|-00.15|+01.04|+03.19",
+            "Mug|-00.38|+01.09|+03.19",
+            "Toaster|-00.23|+01.04|+02.87",
+            "Pan|-00.27|+01.04|+02.56",
+            "Bowl|-00.50|+01.04|+02.22",
+            "Tomato|-00.75|+01.08|+02.40",
+            "Bread|-00.18|+01.12|+01.89",
+            "Spoon|-00.43|+01.04|+01.90",
+            "Fork|-00.46|+01.04|+01.78"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.50|+00.22|+00.59": {
+        "contains": [
+            "ButterKnife|-02.63|+01.11|+00.60"
+        ],
+        "State": "Open"
+    },
+    "Fridge|-03.52|+00.00|+02.72": {
+        "contains": [
+            "Lettuce|-03.31|+00.97|+03.04",
+            "Egg|-03.37|+01.30|+02.85"
+        ],
+        "State": "Open"
+    },
+    "Microwave|-00.37|+01.11|+00.43": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Sink|-01.39|+00.98|+00.44|SinkBasin": {
+        "contains": [
+            "Plate|-01.19|+00.92|+00.40",
+            "Knife|-01.48|+00.93|+00.42",
+            "Cup|-01.58|+00.92|+00.34"
+        ],
+        "State": "clear"
+    },
+    "StoveBurner|-03.00|+01.10|+00.48": {
+        "contains": [
+            "Pot|-03.00|+01.14|+00.48"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the Apple and Tomato in the Fridge
+Action: navigate, Object: Fridge|-03.52|+00.00|+02.72, Target: None
+Action: pick_object, Object: Apple|-02.48|+01.18|+00.48, Target: None
+Action: put_object, Object: Apple|-02.48|+01.18|+00.48, Target: Fridge|-03.52|+00.00|+02.72
+Action: pick_object, Object: Tomato|-00.75|+01.08|+02.40, Target: None
+Action: put_object, Object: Tomato|-00.75|+01.08|+02.40, Target: Fridge|-03.52|+00.00|+02.72
+Action: standby, Object: , Target: None
+None
+None
+None
+Failed to pick Apple|-02.48|+01.18|+00.48 in Fridge|-03.52|+00.00|+02.72. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "CounterTop|-03.86|+01.16|+00.38": {
+        "contains": [
+            "SaltShaker|-03.76|+01.11|+00.52",
+            "PepperShaker|-03.76|+01.11|+00.39"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-02.28|+01.16|+00.38": {
+        "contains": [
+            "Ladle|-01.95|+01.14|+00.45"
+        ],
+        "State": "clear"
+    },
+    "DiningTable|-00.62|+00.02|+02.49": {
+        "contains": [
+            "Bowl|-00.50|+01.04|+02.22",
+            "Spoon|-00.43|+01.04|+01.90",
+            "Fork|-00.46|+01.04|+01.78",
+            "DishSponge|-01.12|+01.15|+00.09"
+        ],
+        "State": "clear"
+    },
+    "Sink|-01.39|+00.98|+00.44|SinkBasin": {
+        "contains": [
+            "Cup|-01.58|+00.92|+00.34",
+            "Knife|-01.48|+00.93|+00.42",
+            "Pot|-03.00|+01.14|+00.48"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.50|+00.22|+00.59": {
+        "contains": [
+            "ButterKnife|-02.63|+01.11|+00.60"
+        ],
+        "State": "Open"
+    },
+    "Fridge|-03.52|+00.00|+02.72": {
+        "contains": [
+            "Apple|-02.48|+01.18|+00.48",
+            "Tomato|-00.75|+01.08|+02.40"
+        ],
+        "State": "Open"
+    },
+    "Microwave|-00.37|+01.11|+00.43": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "StoveBurner|-03.00|+01.10|+00.48": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Put the Apple and Tomato in the Fridge, Action history: ['Put the ButterKnife in the Drawer and DishSponge on the Dining Table'], Action feedback: Failed to pick Apple|-02.48|+01.18|+00.48 in Fridge|-03.52|+00.00|+02.72. Skip this action and move to the rest of plan., Feedback count: 0
+Action: navigate, Object: Fridge|-03.52|+00.00|+02.72, Target: None
+Action: pick_object, Object: Tomato|-00.75|+01.08|+02.40, Target: Fridge|-03.52|+00.00|+02.72
+Action: put_object, Object: Tomato|-00.75|+01.08|+02.40, Target: Fridge|-03.52|+00.00|+02.72
+Action: close_receptacle, Object: Fridge|-03.52|+00.00|+02.72, Target: None
+Action: standby, Object: , Target: None
+None
+None
+None
+Failed to pick Tomato|-00.75|+01.08|+02.40 in Fridge|-03.52|+00.00|+02.72. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "CounterTop|-03.86|+01.16|+00.38": {
+        "contains": [
+            "SaltShaker|-03.76|+01.11|+00.52",
+            "PepperShaker|-03.76|+01.11|+00.39"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-02.28|+01.16|+00.38": {
+        "contains": [
+            "Ladle|-01.95|+01.14|+00.45"
+        ],
+        "State": "clear"
+    },
+    "DiningTable|-00.62|+00.02|+02.49": {
+        "contains": [
+            "Bowl|-00.50|+01.04|+02.22",
+            "Spoon|-00.43|+01.04|+01.90",
+            "Fork|-00.46|+01.04|+01.78",
+            "DishSponge|-01.12|+01.15|+00.09"
+        ],
+        "State": "clear"
+    },
+    "Sink|-01.39|+00.98|+00.44|SinkBasin": {
+        "contains": [
+            "Cup|-01.58|+00.92|+00.34",
+            "Knife|-01.48|+00.93|+00.42",
+            "Pot|-03.00|+01.14|+00.48"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.50|+00.22|+00.59": {
+        "contains": [
+            "ButterKnife|-02.63|+01.11|+00.60"
+        ],
+        "State": "Open"
+    },
+    "Fridge|-03.52|+00.00|+02.72": {
+        "contains": [
+            "Apple|-02.48|+01.18|+00.48",
+            "Tomato|-00.75|+01.08|+02.40"
+        ],
+        "State": "Open"
+    },
+    "Microwave|-00.37|+01.11|+00.43": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "StoveBurner|-03.00|+01.10|+00.48": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Put the Apple and Tomato in the Fridge, Action history: ['Put the ButterKnife in the Drawer and DishSponge on the Dining Table'], Action feedback: Failed to pick Tomato|-00.75|+01.08|+02.40 in Fridge|-03.52|+00.00|+02.72. Skip this action and move to the rest of plan., Feedback count: 1
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "CounterTop|-03.86|+01.16|+00.38": {
+        "contains": [
+            "SaltShaker|-03.76|+01.11|+00.52",
+            "PepperShaker|-03.76|+01.11|+00.39"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-02.28|+01.16|+00.38": {
+        "contains": [
+            "Ladle|-01.95|+01.14|+00.45"
+        ],
+        "State": "clear"
+    },
+    "DiningTable|-00.62|+00.02|+02.49": {
+        "contains": [
+            "Bowl|-00.50|+01.04|+02.22",
+            "Spoon|-00.43|+01.04|+01.90",
+            "Fork|-00.46|+01.04|+01.78",
+            "DishSponge|-01.12|+01.15|+00.09"
+        ],
+        "State": "clear"
+    },
+    "Sink|-01.39|+00.98|+00.44|SinkBasin": {
+        "contains": [
+            "Cup|-01.58|+00.92|+00.34",
+            "Knife|-01.48|+00.93|+00.42",
+            "Pot|-03.00|+01.14|+00.48"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.50|+00.22|+00.59": {
+        "contains": [
+            "ButterKnife|-02.63|+01.11|+00.60"
+        ],
+        "State": "Open"
+    },
+    "Fridge|-03.52|+00.00|+02.72": {
+        "contains": [
+            "Apple|-02.48|+01.18|+00.48",
+            "Tomato|-00.75|+01.08|+02.40"
+        ],
+        "State": "Open"
+    },
+    "Microwave|-00.37|+01.11|+00.43": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "StoveBurner|-03.00|+01.10|+00.48": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "CounterTop|-02.28|+01.16|+00.38": {
+        "contains": [
+            "Ladle|-01.95|+01.14|+00.45",
+            "HousePlant|-02.16|+01.10|+00.17",
+            "Potato|-02.66|+01.15|+00.25",
+            "Apple|-02.48|+01.18|+00.48"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-03.86|+01.16|+00.38": {
+        "contains": [
+            "PepperShaker|-03.76|+01.11|+00.39",
+            "SaltShaker|-03.76|+01.11|+00.52"
+        ],
+        "State": "clear"
+    },
+    "DiningTable|-00.62|+00.02|+02.49": {
+        "contains": [
+            "CoffeeMachine|-00.15|+01.04|+03.19",
+            "Mug|-00.38|+01.09|+03.19",
+            "Toaster|-00.23|+01.04|+02.87",
+            "Pan|-00.27|+01.04|+02.56",
+            "Bowl|-00.50|+01.04|+02.22",
+            "Tomato|-00.75|+01.08|+02.40",
+            "Bread|-00.18|+01.12|+01.89",
+            "Spoon|-00.43|+01.04|+01.90",
+            "Fork|-00.46|+01.04|+01.78"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.50|+00.22|+00.59": {
+        "contains": [
+            "ButterKnife|-02.63|+01.11|+00.60"
+        ],
+        "State": "Open"
+    },
+    "Fridge|-03.52|+00.00|+02.72": {
+        "contains": [
+            "Lettuce|-03.31|+00.97|+03.04",
+            "Egg|-03.37|+01.30|+02.85"
+        ],
+        "State": "Open"
+    },
+    "Microwave|-00.37|+01.11|+00.43": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Sink|-01.39|+00.98|+00.44|SinkBasin": {
+        "contains": [
+            "Plate|-01.19|+00.92|+00.40",
+            "Knife|-01.48|+00.93|+00.42",
+            "Cup|-01.58|+00.92|+00.34"
+        ],
+        "State": "clear"
+    },
+    "StoveBurner|-03.00|+01.10|+00.48": {
+        "contains": [
+            "Pot|-03.00|+01.14|+00.48"
+        ],
+        "State": "clear"
+    }
+}
+Prompt: Put the Pot in the sink and bring an item to wash the pot in the sink
+Action: navigate, Object: CounterTop|-02.28|+01.16|+00.38, Target: None
+Action: pick_object, Object: Pot|-03.00|+01.14|+00.48, Target: CounterTop|-02.28|+01.16|+00.38
+Action: navigate, Object: Sink|-01.39|+00.98|+00.44|SinkBasin, Target: None
+Action: put_object, Object: Pot|-03.00|+01.14|+00.48, Target: Sink|-01.39|+00.98|+00.44|SinkBasin
+Action: navigate, Object: DiningTable|-00.62|+00.02|+02.49, Target: None
+Action: pick_object, Object: DishSponge|-01.12|+01.15|+00.09, Target: DiningTable|-00.62|+00.02|+02.49
+Action: navigate, Object: Sink|-01.39|+00.98|+00.44|SinkBasin, Target: None
+Action: put_object, Object: DishSponge|-01.12|+01.15|+00.09, Target: Sink|-01.39|+00.98|+00.44|SinkBasin
+Action: standby, Object: , Target: None
+None
+Failed to navigate to CounterTop|-02.28|+01.16|+00.38
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "CounterTop|-03.86|+01.16|+00.38": {
+        "contains": [
+            "SaltShaker|-03.76|+01.11|+00.52",
+            "PepperShaker|-03.76|+01.11|+00.39"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-02.28|+01.16|+00.38": {
+        "contains": [
+            "Ladle|-01.95|+01.14|+00.45"
+        ],
+        "State": "clear"
+    },
+    "DiningTable|-00.62|+00.02|+02.49": {
+        "contains": [
+            "Bowl|-00.50|+01.04|+02.22",
+            "Spoon|-00.43|+01.04|+01.90",
+            "Fork|-00.46|+01.04|+01.78",
+            "DishSponge|-01.12|+01.15|+00.09"
+        ],
+        "State": "clear"
+    },
+    "Sink|-01.39|+00.98|+00.44|SinkBasin": {
+        "contains": [
+            "Cup|-01.58|+00.92|+00.34",
+            "Knife|-01.48|+00.93|+00.42",
+            "Pot|-03.00|+01.14|+00.48"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.50|+00.22|+00.59": {
+        "contains": [
+            "ButterKnife|-02.63|+01.11|+00.60"
+        ],
+        "State": "Open"
+    },
+    "Fridge|-03.52|+00.00|+02.72": {
+        "contains": [
+            "Apple|-02.48|+01.18|+00.48",
+            "Tomato|-00.75|+01.08|+02.40"
+        ],
+        "State": "Open"
+    },
+    "Microwave|-00.37|+01.11|+00.43": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "StoveBurner|-03.00|+01.10|+00.48": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Put the Pot in the sink and bring an item to wash the pot in the sink, Action history: ['Put the ButterKnife in the Drawer and DishSponge on the Dining Table', 'Put the Apple and Tomato in the Fridge'], Action feedback: Failed to navigate to CounterTop|-02.28|+01.16|+00.38, Feedback count: 0
+Action: navigate, Object: Sink|-01.39|+00.98|+00.44|SinkBasin, Target: None
+Action: pick_object, Object: Pot|-03.00|+01.14|+00.48, Target: Sink|-01.39|+00.98|+00.44|SinkBasin
+Action: put_object, Object: Pot|-03.00|+01.14|+00.48, Target: Sink|-01.39|+00.98|+00.44|SinkBasin
+Action: navigate, Object: DiningTable|-00.62|+00.02|+02.49, Target: None
+Action: pick_object, Object: DishSponge|-01.12|+01.15|+00.09, Target: DiningTable|-00.62|+00.02|+02.49
+Action: put_object, Object: DishSponge|-01.12|+01.15|+00.09, Target: Sink|-01.39|+00.98|+00.44|SinkBasin
+Action: standby, Object: Agent, Target: None
+None
+None
+None
+Failed to pick Pot|-03.00|+01.14|+00.48 in Sink|-01.39|+00.98|+00.44|SinkBasin. Skip this action and move to the rest of plan.
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "CounterTop|-03.86|+01.16|+00.38": {
+        "contains": [
+            "SaltShaker|-03.76|+01.11|+00.52",
+            "PepperShaker|-03.76|+01.11|+00.39"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-02.28|+01.16|+00.38": {
+        "contains": [
+            "Ladle|-01.95|+01.14|+00.45"
+        ],
+        "State": "clear"
+    },
+    "DiningTable|-00.62|+00.02|+02.49": {
+        "contains": [
+            "Bowl|-00.50|+01.04|+02.22",
+            "Spoon|-00.43|+01.04|+01.90",
+            "Fork|-00.46|+01.04|+01.78",
+            "DishSponge|-01.12|+01.15|+00.09"
+        ],
+        "State": "clear"
+    },
+    "Sink|-01.39|+00.98|+00.44|SinkBasin": {
+        "contains": [
+            "Cup|-01.58|+00.92|+00.34",
+            "Knife|-01.48|+00.93|+00.42",
+            "Pot|-03.00|+01.14|+00.48"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.50|+00.22|+00.59": {
+        "contains": [
+            "ButterKnife|-02.63|+01.11|+00.60"
+        ],
+        "State": "Open"
+    },
+    "Fridge|-03.52|+00.00|+02.72": {
+        "contains": [
+            "Apple|-02.48|+01.18|+00.48",
+            "Tomato|-00.75|+01.08|+02.40"
+        ],
+        "State": "Open"
+    },
+    "Microwave|-00.37|+01.11|+00.43": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "StoveBurner|-03.00|+01.10|+00.48": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Put the Pot in the sink and bring an item to wash the pot in the sink, Action history: ['Put the ButterKnife in the Drawer and DishSponge on the Dining Table', 'Put the Apple and Tomato in the Fridge'], Action feedback: Failed to pick Pot|-03.00|+01.14|+00.48 in Sink|-01.39|+00.98|+00.44|SinkBasin. Skip this action and move to the rest of plan., Feedback count: 1
+{
+    "Agent": {
+        "contains": [],
+        "State": "clear"
+    },
+    "CounterTop|-03.86|+01.16|+00.38": {
+        "contains": [
+            "SaltShaker|-03.76|+01.11|+00.52",
+            "PepperShaker|-03.76|+01.11|+00.39"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-02.28|+01.16|+00.38": {
+        "contains": [
+            "Ladle|-01.95|+01.14|+00.45"
+        ],
+        "State": "clear"
+    },
+    "DiningTable|-00.62|+00.02|+02.49": {
+        "contains": [
+            "Bowl|-00.50|+01.04|+02.22",
+            "Spoon|-00.43|+01.04|+01.90",
+            "Fork|-00.46|+01.04|+01.78",
+            "DishSponge|-01.12|+01.15|+00.09"
+        ],
+        "State": "clear"
+    },
+    "Sink|-01.39|+00.98|+00.44|SinkBasin": {
+        "contains": [
+            "Cup|-01.58|+00.92|+00.34",
+            "Knife|-01.48|+00.93|+00.42",
+            "Pot|-03.00|+01.14|+00.48"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.50|+00.22|+00.59": {
+        "contains": [
+            "ButterKnife|-02.63|+01.11|+00.60"
+        ],
+        "State": "Open"
+    },
+    "Fridge|-03.52|+00.00|+02.72": {
+        "contains": [
+            "Apple|-02.48|+01.18|+00.48",
+            "Tomato|-00.75|+01.08|+02.40"
+        ],
+        "State": "Open"
+    },
+    "Microwave|-00.37|+01.11|+00.43": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "StoveBurner|-03.00|+01.10|+00.48": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+__________________________________________________
+{
+    "CounterTop|-02.28|+01.16|+00.38": {
+        "contains": [
+            "Ladle|-01.95|+01.14|+00.45",
+            "HousePlant|-02.16|+01.10|+00.17",
+            "Potato|-02.66|+01.15|+00.25",
+            "Apple|-02.48|+01.18|+00.48"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-03.86|+01.16|+00.38": {
+        "contains": [
+            "PepperShaker|-03.76|+01.11|+00.39",
+            "SaltShaker|-03.76|+01.11|+00.52"
+        ],
+        "State": "clear"
+    },
+    "DiningTable|-00.62|+00.02|+02.49": {
+        "contains": [
+            "CoffeeMachine|-00.15|+01.04|+03.19",
+            "Mug|-00.38|+01.09|+03.19",
+            "Toaster|-00.23|+01.04|+02.87",
+            "Pan|-00.27|+01.04|+02.56",
+            "Bowl|-00.50|+01.04|+02.22",
+            "Tomato|-00.75|+01.08|+02.40",
+            "Bread|-00.18|+01.12|+01.89",
+            "Spoon|-00.43|+01.04|+01.90",
+            "Fork|-00.46|+01.04|+01.78"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.50|+00.22|+00.59": {
+        "contains": [
+            "ButterKnife|-02.63|+01.11|+00.60"
+        ],
+        "State": "Open"
+    },
+    "Fridge|-03.52|+00.00|+02.72": {
+        "contains": [
+            "Lettuce|-03.31|+00.97|+03.04",
+            "Egg|-03.37|+01.30|+02.85"
+        ],
+        "State": "Open"
+    },
+    "Microwave|-00.37|+01.11|+00.43": {
+        "contains": [],
+        "State": "Closed"
+    },
+    "Sink|-01.39|+00.98|+00.44|SinkBasin": {
+        "contains": [
+            "Plate|-01.19|+00.92|+00.40",
+            "Knife|-01.48|+00.93|+00.42",
+            "Cup|-01.58|+00.92|+00.34"
+        ],
+        "State": "clear"
+    },
+    "StoveBurner|-03.00|+01.10|+00.48": {
+        "contains": [
+            "Pot|-03.00|+01.14|+00.48"
+        ],
+        "State": "clear"
+    }
+}
+==================================================

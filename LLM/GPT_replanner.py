@@ -23,7 +23,7 @@ class ReplanningAgent:
         # Patch the OpenAI client with instructor
         self.client = instructor.from_openai(openai.OpenAI())
 
-    def replanner(self, embodiment: str, scene_graph: Dict[str, Any], task: str, action_history: List[Action], feedback: str):
+    def replanner(self, embodiment: str, scene_graph: Dict[str, Any], task: str, action_history: List[Action], feedback: str, temperature:float):
         curr_chat_messages = [
             {
                 "role": "system",
@@ -81,7 +81,7 @@ class ReplanningAgent:
                 response_model=ActionSequence,
                 messages=curr_chat_messages,
                 max_tokens=1024,
-                temperature=0.6,
+                temperature=float(temperature),
                 top_p=0.9,
             )
             return response
@@ -124,7 +124,7 @@ if __name__ == "__main__":
         embodiment = "Bi-manipulation"
         action_history = details['prompts'][:2]
         feedback = "The Fork is not on the CounterTop"
-
+        temperature = 0.6
 
         sg = {'Agent': {'contains': [], 'State': 'clear'}, 'Fridge|-02.48|+00.00|-00.78': {'contains': [], 'State': 'Closed'}, 'Sink|+01.38|+00.81|-01.27': {'contains': ['Tomato|+01.30|+00.96|-01.08'], 'State': 'clear'}, 'Microwave|-02.58|+00.90|+02.44': {'contains': [], 'State': 'Closed'}, 'CounterTop|+01.59|+00.95|+00.41': {'contains': ['Fork|+01.44|+00.90|+00.34', 'SaltShaker|+01.67|+00.90|+00.45', 'ButterKnife|+01.44|+00.90|+00.43'], 'State': 'clear'}, 'CounterTop|-00.36|+00.95|+01.09': {'contains': ['Apple|-00.48|+00.97|+00.41', 'Bowl|-00.65|+00.90|+01.26', 'Cup|-00.65|+00.90|+00.74'], 'State': 'clear'}, 'Drawer|-02.28|+00.79|+01.37': {'contains': [], 'State': 'Closed'}, 'Cabinet|+00.15|+02.01|-01.60': {'contains': [], 'State': 'Closed'}}
         task = "Cook the Apple in the Microwave"
@@ -133,7 +133,7 @@ if __name__ == "__main__":
         print(task)
         print(action_history)
 
-        action_sequence = replanning_agent.replanner(embodiment, sg, task, action_history, feedback)
+        action_sequence = replanning_agent.replanner(embodiment, sg, task, action_history, feedback, temperature)
     
         # Print the structured output
         if action_sequence:

@@ -1,0 +1,79 @@
+Task: task1
+Prompt: Put the cup in the Microwave
+Action: navigate, Object: Sink|-01.39|+00.98|+00.44|SinkBasin, Target: None
+Action: pick_object, Object: Cup|-01.58|+00.92|+00.34, Target: None
+Action: navigate, Object: Microwave|-00.37|+01.11|+00.43, Target: None
+Action: put_object, Object: Cup|-01.58|+00.92|+00.34, Target: Microwave|-00.37|+01.11|+00.43
+Action: standby, Object: , Target: None
+None
+None
+None
+None
+None
+None
+None
+Failed to place Cup|-01.58|+00.92|+00.34 in Microwave|-00.37|+01.11|+00.43. Cup|-01.58|+00.92|+00.34 is in not in the hand of the Agent, Find the Cup|-01.58|+00.92|+00.34 first.
+{
+    "Agent": {
+        "contains": [
+            "Fork|-00.46|+01.04|+01.78",
+            "Cup|-01.58|+00.92|+00.34"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-03.86|+01.16|+00.38": {
+        "contains": [
+            "PepperShaker|-03.76|+01.11|+00.39",
+            "Spoon|-00.43|+01.04|+01.90"
+        ],
+        "State": "clear"
+    },
+    "CounterTop|-02.28|+01.16|+00.38": {
+        "contains": [
+            "Ladle|-01.95|+01.14|+00.45"
+        ],
+        "State": "clear"
+    },
+    "DiningTable|-00.62|+00.02|+02.49": {
+        "contains": [
+            "Bowl|-00.50|+01.04|+02.22",
+            "DishSponge|-01.12|+01.15|+00.09",
+            "Knife|-01.48|+00.93|+00.42",
+            "SaltShaker|-03.76|+01.11|+00.52"
+        ],
+        "State": "clear"
+    },
+    "Sink|-01.39|+00.98|+00.44|SinkBasin": {
+        "contains": [
+            "Pot|-03.00|+01.14|+00.48"
+        ],
+        "State": "clear"
+    },
+    "Drawer|-02.50|+00.22|+00.59": {
+        "contains": [
+            "ButterKnife|-02.63|+01.11|+00.60"
+        ],
+        "State": "Open"
+    },
+    "Fridge|-03.52|+00.00|+02.72": {
+        "contains": [
+            "Apple|-02.48|+01.18|+00.48",
+            "Tomato|-00.75|+01.08|+02.40"
+        ],
+        "State": "Closed"
+    },
+    "Microwave|-00.37|+01.11|+00.43": {
+        "contains": [],
+        "State": "Open"
+    },
+    "StoveBurner|-03.00|+01.10|+00.48": {
+        "contains": [],
+        "State": "clear"
+    }
+}
+Prompt: Put the cup in the Microwave, Action history: [], Action feedback: Failed to place Cup|-01.58|+00.92|+00.34 in Microwave|-00.37|+01.11|+00.43. Cup|-01.58|+00.92|+00.34 is in not in the hand of the Agent, Find the Cup|-01.58|+00.92|+00.34 first., Feedback count: 0
+Action: navigate, Object: Agent, Target: CounterTop|-03.86|+01.16|+00.38
+Action: pick_object, Object: Cup|-01.58|+00.92|+00.34, Target: CounterTop|-03.86|+01.16|+00.38
+Action: navigate, Object: Agent, Target: Microwave|-00.37|+01.11|+00.43
+Action: put_object, Object: Cup|-01.58|+00.92|+00.34, Target: Microwave|-00.37|+01.11|+00.43
+Action: standby, Object: Agent, Target: None

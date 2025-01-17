@@ -2,16 +2,11 @@ import copy
 import json
 import os
 from pathlib import Path
-import random
-import pickle
-import warnings
-import cv2
-import math
+
 from PIL import Image
 # import imageio
 import matplotlib.pyplot as plt
 import numpy as np
-import torch
 from ai2thor.controller import Controller
 from ai2thor.platform import CloudRendering
 from tqdm import trange
@@ -24,8 +19,7 @@ import math
 from typing import List,Dict
 import json
 import open_clip
-import torch
-import torchvision
+
 
 import copy
 
