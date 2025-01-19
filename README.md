@@ -13,41 +13,55 @@ Current scene-graph representations often struggle to adapt to dynamic environme
    - Adapts to external changes in the environment by recalculating plans based on updated scene representations, action history, and feedback.  
  
 
-## **Algorithm**  
+## Algorithm: Task Planning with Scene Update and Replanning
 
-#### Input:  
-- \( T \): Set of tasks.  
-- \( A_{\text{history}} \): Action history.  
-- \( S_{\text{scene}} \): Current scene representation.  
-- \( S_{\text{physical}} \): Physical state of the scene (from sensors or agents).  
-- \( F \): Feedback provided to the system.  
+### **Input**:
+- **T**: Set of tasks.  
+- **A_history**: Action history.  
+- **S_scene**: Current scene representation.  
+- **S_physical**: Physical state of the scene (from sensors or agents).  
+- **F**: Feedback provided to the system.  
 
-#### Output:  
-- Updated \( S_{\text{scene}} \): Scene representation.  
-- \( A, \text{Object, Target} \): Tuple representing action primitives, objects, and targets after replanning (if necessary).  
+### **Output**:
+- Updated **S_scene**: Scene representation.  
+- **A, Object, Target**: Tuple representing action primitives, objects, and targets after replanning (if necessary).  
 
 ---
 
-#### Algorithm:  
+### **Algorithm**:
 
-1. **Initial Planning**:  
-   Call the function \( \text{Plan}(T, S_{\text{scene}}) \):  
-   - Input: Tasks \( T \) and current scene representation \( S_{\text{scene}} \).  
-   - Output: Tuple \( (A, \text{Object, Target}) \):  
-     - \( A \): Action primitives.  
-     - \( \text{Object} \): Objects involved in the plan.  
-     - \( \text{Target} \): Target locations or states.  
+#### **1. Initial Planning**:
+Call the function `Plan(T, S_scene)`:
 
-2. **Scene Check**:  
-   Compare \( S_{\text{scene}} \) with \( S_{\text{physical}} \):  
-   - If \( S_{\text{scene}} \neq S_{\text{physical}} \):  
-     - Update \( S_{\text{scene}} \) to \( S_{\text{physical}} \).  
-     - Proceed to replanning.  
+- **Input**:  
+  Tasks **T** and current scene representation **S_scene**.  
+- **Output**:  
+  Tuple \((A, Object, Target)\):  
+  - **A**: Action primitives.  
+  - **Object**: Objects involved in the plan.  
+  - **Target**: Target locations or states.  
 
-3. **Replanning**:  
-   Call \( \text{Replan}(T, A_{\text{history}}, F, S_{\text{scene}}) \):  
-   - Input: Current tasks \( T \), action history \( A_{\text{history}} \), feedback \( F \), and updated \( S_{\text{scene}} \).  
-   - Output: Tuple \( (A, \text{Object, Target}) \).  
+---
+
+#### **2. Scene Check**:
+Compare **S_scene** with **S_physical**:
+
+- **If \( S_{scene} \neq S_{physical} \):**  
+  - Update \( S_{scene} = S_{physical} \).  
+  - Proceed to replanning.  
+
+---
+
+#### **3. Replanning**:
+Call `Replan(T, A_history, F, S_scene)`:
+
+- **Input**:  
+  Current tasks **T**, action history **A_history**, feedback **F**, and updated **S_scene**.  
+- **Output**:  
+  Tuple \((A, Object, Target)\):  
+  - **A**: Updated action primitives.  
+  - **Object**: Updated objects.  
+  - **Target**: Updated target states or locations.  
 
 
 ---
@@ -63,14 +77,23 @@ Current scene-graph representations often struggle to adapt to dynamic environme
 ## **Usage**  
 
 ### Running Experiments  
+To begin, run the `exploration.py` script to initialize the environment and gather initial scene data:  
 
+```bash
+python exploration.py
+```
 To run experiments, use the `run_experiment.py` script with configurable parameters. Below are the details for each argument:  
 
-| **Argument**               | **Default**                                                                                     | **Description**                                                                 |
-|----------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|                                           |
-| `--experiment_type`        | `"multi_step"`                                                                                 | Type of experiment: `multi_step`, `obj_displaced`, or `obj_introduced`.         |
-| `--temperature_list`       | `["0.3", "0.6", "0.9"]`                                                                        | List of temperature values for the LLM.                                        |
-| `--scene`                  | `"FloorPlan4"`                                                                                | Name of the scene to use in the experiment.                                     |
-| `--visual_feedback_limit`  | `1`                                                                                           | Number of visual feedback steps allowed.                                       |
-| `--action_feedback_limit`  | `2`                                                                                           | Number of action feedback steps allowed.                                       |
-| `--embodiment`             | `"Bi-manipulation"`                                                                           | Type of embodiment: e.g., `Bi-manipulation`, `Single-arm`, etc.                 |
+| **Argument**               | **Default**                     | **Description**                                                         |
+|----------------------------|---------------------------------|-------------------------------------------------------------------------|
+| `--experiment_type`        | `"multi_step"`                  | Type of experiment: `multi_step`, `obj_displaced`, or `obj_introduced`. |
+| `--temperature_list`       | `["0.3", "0.6", "0.9"]`         | List of temperature values for the LLM.                                |
+| `--scene`                  | `"FloorPlan4"`                  | Name of the scene to use in the experiment.                            |
+| `--visual_feedback_limit`  | `1`                             | Number of visual feedback steps allowed.                               |
+| `--action_feedback_limit`  | `2`                             | Number of action feedback steps allowed.                               |
+| `--embodiment`             | `"Bi-manipulation"`             | Type of embodiment: e.g., `Bi-manipulation`, `Single-arm`, etc.         |
+
+#### Example Command
+```bash
+python run_experiment.py --experiment_type obj_displaced --scene FloorPlan4 --embodiment Single-arm
+
